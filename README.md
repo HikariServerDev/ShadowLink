@@ -18,16 +18,16 @@ ShadowLink never creates Item Shadowing itself. It only protects what already ex
 
 | Minecraft | JAR | Fabric Loader | Java |
 | --- | --- | --- | --- |
-| 1.18.2 | `ShadowLink-1.18.2-1.0.1.jar` | 0.13.3 or newer | 17 or newer |
-| 1.18.1 | `ShadowLink-1.18.1-1.0.1.jar` | 0.13.3 or newer | 17 or newer |
-| 1.18 | `ShadowLink-1.18-1.0.1.jar` | 0.13.3 or newer | 17 or newer |
-| 1.16.5 | `ShadowLink-1.16.5-1.0.1.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16.4 | `ShadowLink-1.16.4-1.0.1.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16.3 | `ShadowLink-1.16.3-1.0.1.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16.2 | `ShadowLink-1.16.2-1.0.1.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16.1 | `ShadowLink-1.16.1-1.0.1.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16 | `ShadowLink-1.16-1.0.1.jar` | 0.11.3 or newer | 8 or newer |
-| 1.12.2 | `ShadowLink-1.12.2-1.0.1.jar` | 0.15.11 or newer, with [Legacy Fabric](https://legacyfabric.net/) | 8 or newer |
+| 1.18.2 | `ShadowLink-1.18.2-1.0.2.jar` | 0.13.3 or newer | 17 or newer |
+| 1.18.1 | `ShadowLink-1.18.1-1.0.2.jar` | 0.13.3 or newer | 17 or newer |
+| 1.18 | `ShadowLink-1.18-1.0.2.jar` | 0.13.3 or newer | 17 or newer |
+| 1.16.5 | `ShadowLink-1.16.5-1.0.2.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16.4 | `ShadowLink-1.16.4-1.0.2.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16.3 | `ShadowLink-1.16.3-1.0.2.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16.2 | `ShadowLink-1.16.2-1.0.2.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16.1 | `ShadowLink-1.16.1-1.0.2.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16 | `ShadowLink-1.16-1.0.2.jar` | 0.11.3 or newer | 8 or newer |
+| 1.12.2 | `ShadowLink-1.12.2-1.0.2.jar` | 0.15.11 or newer, with [Legacy Fabric](https://legacyfabric.net/) | 8 or newer |
 
 ### Installation
 
@@ -71,16 +71,16 @@ ShadowLink自身がItem Shadowingを作ることはありません。すでに�
 
 | Minecraft | JAR | Fabric Loader | Java |
 | --- | --- | --- | --- |
-| 1.18.2 | `ShadowLink-1.18.2-1.0.1.jar` | 0.13.3以上 | 17以上 |
-| 1.18.1 | `ShadowLink-1.18.1-1.0.1.jar` | 0.13.3以上 | 17以上 |
-| 1.18 | `ShadowLink-1.18-1.0.1.jar` | 0.13.3以上 | 17以上 |
-| 1.16.5 | `ShadowLink-1.16.5-1.0.1.jar` | 0.11.3以上 | 8以上 |
-| 1.16.4 | `ShadowLink-1.16.4-1.0.1.jar` | 0.11.3以上 | 8以上 |
-| 1.16.3 | `ShadowLink-1.16.3-1.0.1.jar` | 0.11.3以上 | 8以上 |
-| 1.16.2 | `ShadowLink-1.16.2-1.0.1.jar` | 0.11.3以上 | 8以上 |
-| 1.16.1 | `ShadowLink-1.16.1-1.0.1.jar` | 0.11.3以上 | 8以上 |
-| 1.16 | `ShadowLink-1.16-1.0.1.jar` | 0.11.3以上 | 8以上 |
-| 1.12.2 | `ShadowLink-1.12.2-1.0.1.jar` | 0.15.11以上＋[Legacy Fabric](https://legacyfabric.net/) | 8以上 |
+| 1.18.2 | `ShadowLink-1.18.2-1.0.2.jar` | 0.13.3以上 | 17以上 |
+| 1.18.1 | `ShadowLink-1.18.1-1.0.2.jar` | 0.13.3以上 | 17以上 |
+| 1.18 | `ShadowLink-1.18-1.0.2.jar` | 0.13.3以上 | 17以上 |
+| 1.16.5 | `ShadowLink-1.16.5-1.0.2.jar` | 0.11.3以上 | 8以上 |
+| 1.16.4 | `ShadowLink-1.16.4-1.0.2.jar` | 0.11.3以上 | 8以上 |
+| 1.16.3 | `ShadowLink-1.16.3-1.0.2.jar` | 0.11.3以上 | 8以上 |
+| 1.16.2 | `ShadowLink-1.16.2-1.0.2.jar` | 0.11.3以上 | 8以上 |
+| 1.16.1 | `ShadowLink-1.16.1-1.0.2.jar` | 0.11.3以上 | 8以上 |
+| 1.16 | `ShadowLink-1.16-1.0.2.jar` | 0.11.3以上 | 8以上 |
+| 1.12.2 | `ShadowLink-1.12.2-1.0.2.jar` | 0.15.11以上＋[Legacy Fabric](https://legacyfabric.net/) | 8以上 |
 
 ### 導入方法
 
