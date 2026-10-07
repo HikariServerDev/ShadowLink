@@ -87,6 +87,12 @@ public final class ShadowManager {
      * after the holder was loaded; the final content is what has to be judged.
      */
     private static final int RELOAD_SETTLE_TICKS = 100;
+    /**
+     * How long after a reload a slot may be overwritten once more with its saved data and
+     * still be re-linked. Player data kept in an external database is applied on top of the
+     * player file some time after the login, depending on how fast that database answers.
+     */
+    private static final int REWRITE_WINDOW_TICKS = 600;
     private static final int MAX_ERROR_LOGS = 10;
 
     private static volatile ShadowManager instance;
@@ -635,7 +641,7 @@ public final class ShadowManager {
                 if (current == group.canonical) {
                     continue;
                 }
-                if (this.isRewrittenCopy(group, current)) {
+                if (this.isRewrittenCopy(group, current) || this.isReloadedAgain(group, group.links.get(endpoint), current)) {
                     // The loaded holder was deserialized again in place (another mod restored
                     // its inventory from NBT). Same lifecycle artefact as a reload: put the
                     // canonical instance back. The discarded stack is an identical copy.
@@ -700,6 +706,26 @@ public final class ShadowManager {
         return InventoryAccess.snapshotOf(current).equals(InventoryAccess.snapshotOf(group.canonical));
     }
 
+    /**
+     * A holder that was just reloaded got its slot overwritten again with the data it had
+     * been saved with (not with the current state of the shared stack, which may have changed
+     * through the other holders in the meantime). That is the same stale copy the reload
+     * already replaced once, written by another mod loading the same save a second time.
+     */
+    private boolean isReloadedAgain(ShadowGroup group, ShadowGroup.Link link, ItemStack current) {
+        if (link.reloadedFrom == null) {
+            return false;
+        }
+        if (this.ticks - link.reloadedAt > REWRITE_WINDOW_TICKS) {
+            link.reloadedFrom = null;
+            return false;
+        }
+        if (group.gained || current.isEmpty() || group.canonical.isEmpty() || this.byCanonical.containsKey(current)) {
+            return false;
+        }
+        return InventoryAccess.snapshotOf(current).equals(link.reloadedFrom);
+    }
+
     // ------------------------------------------------------------------------------------
     // Holder unload / reload
     // ------------------------------------------------------------------------------------
@@ -730,6 +756,12 @@ public final class ShadowManager {
             ShadowGroup.Link link = group.links.get(endpoint);
             if (!link.active()) {
                 link.mismatchSince = -1;
+                if (group.canonical != null && !group.canonical.isEmpty() && InventoryAccess.get(inventory, endpoint.slot()) == group.canonical) {
+                    // Marked unavailable earlier while the holder was merely out of reach.
+                    // It is serialized only now, with the stack as it is at this moment.
+                    link.awaiting = InventoryAccess.snapshotOf(group.canonical);
+                    this.markDirty();
+                }
                 kept = true;
                 continue;
             }
@@ -871,6 +903,8 @@ public final class ShadowManager {
         if (current != group.canonical) {
             InventoryAccess.set(inventory, slot, group.canonical);
         }
+        link.reloadedFrom = link.awaiting;
+        link.reloadedAt = this.ticks;
         link.awaiting = null;
         this.markDirty();
         ShadowLink.LOGGER.debug("Shadow group {}: restored {}", group.id, endpoint);

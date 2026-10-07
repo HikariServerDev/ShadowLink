@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.atsukimc.shadowlink.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractFurnaceBlockEntityAccessor",
+    "DoubleInventoryAccessor",
+    "HorseBaseEntityAccessor",
+    "HorseScreenHandlerAccessor",
+    "LootableContainerBlockEntityInvoker",
+    "MinecraftServerMixin",
+    "PlayerManagerMixin",
+    "ScreenHandlerMixin",
+    "ServerEntityHandlerMixin",
+    "SimpleInventoryAccessor",
+    "StorageMinecartEntityAccessor",
+    "WorldChunkAccessor",
+    "WorldChunkMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
