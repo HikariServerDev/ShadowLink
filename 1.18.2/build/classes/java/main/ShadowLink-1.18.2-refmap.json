@@ -1,0 +1,100 @@
+{
+  "mappings": {
+    "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor": {
+      "first": "field_5769:Lnet/minecraft/class_1263;",
+      "second": "field_5771:Lnet/minecraft/class_1263;"
+    },
+    "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor": {
+      "inventory": "field_11984:Lnet/minecraft/class_2371;"
+    },
+    "dev/atsukimc/shadowlink/mixin/ServerEntityHandlerMixin": {
+      "stopTracking(Lnet/minecraft/entity/Entity;)V": "Lnet/minecraft/class_3218$class_5526;method_31437(Lnet/minecraft/class_1297;)V",
+      "startTracking(Lnet/minecraft/entity/Entity;)V": "Lnet/minecraft/class_3218$class_5526;method_31436(Lnet/minecraft/class_1297;)V",
+      "net.minecraft.server.world.ServerWorld$ServerEntityHandler": "net/minecraft/class_3218$class_5526"
+    },
+    "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin": {
+      "onPlayerConnect": "Lnet/minecraft/class_3324;method_14570(Lnet/minecraft/class_2535;Lnet/minecraft/class_3222;)V",
+      "remove": "Lnet/minecraft/class_3324;method_14611(Lnet/minecraft/class_3222;)V"
+    },
+    "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor": {
+      "stacks": "field_5828:Lnet/minecraft/class_2371;"
+    },
+    "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker": {
+      "getInvStackList": "method_11282()Lnet/minecraft/class_2371;"
+    },
+    "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor": {
+      "inventory": "field_7836:Lnet/minecraft/class_1263;",
+      "entity": "field_7837:Lnet/minecraft/class_1496;"
+    },
+    "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor": {
+      "items": "field_6962:Lnet/minecraft/class_1277;"
+    },
+    "dev/atsukimc/shadowlink/mixin/WorldChunkMixin": {
+      "setLoadedToWorld": "Lnet/minecraft/class_2818;method_12226(Z)V",
+      "setBlockEntity": "Lnet/minecraft/class_2818;method_12007(Lnet/minecraft/class_2586;)V"
+    },
+    "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor": {
+      "inventory": "field_7735:Lnet/minecraft/class_2371;"
+    },
+    "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin": {
+      "tick": "Lnet/minecraft/server/MinecraftServer;method_3748(Ljava/util/function/BooleanSupplier;)V",
+      "shutdown": "Lnet/minecraft/server/MinecraftServer;method_3782()V"
+    },
+    "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor": {
+      "loadedToWorld": "field_12855:Z"
+    },
+    "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin": {
+      "onSlotClick": "Lnet/minecraft/class_1703;method_7593(IILnet/minecraft/class_1713;Lnet/minecraft/class_1657;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor": {
+        "first": "field_5769:Lnet/minecraft/class_1263;",
+        "second": "field_5771:Lnet/minecraft/class_1263;"
+      },
+      "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor": {
+        "inventory": "field_11984:Lnet/minecraft/class_2371;"
+      },
+      "dev/atsukimc/shadowlink/mixin/ServerEntityHandlerMixin": {
+        "stopTracking(Lnet/minecraft/entity/Entity;)V": "Lnet/minecraft/class_3218$class_5526;method_31437(Lnet/minecraft/class_1297;)V",
+        "startTracking(Lnet/minecraft/entity/Entity;)V": "Lnet/minecraft/class_3218$class_5526;method_31436(Lnet/minecraft/class_1297;)V",
+        "net.minecraft.server.world.ServerWorld$ServerEntityHandler": "net/minecraft/class_3218$class_5526"
+      },
+      "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin": {
+        "onPlayerConnect": "Lnet/minecraft/class_3324;method_14570(Lnet/minecraft/class_2535;Lnet/minecraft/class_3222;)V",
+        "remove": "Lnet/minecraft/class_3324;method_14611(Lnet/minecraft/class_3222;)V"
+      },
+      "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor": {
+        "stacks": "field_5828:Lnet/minecraft/class_2371;"
+      },
+      "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker": {
+        "getInvStackList": "method_11282()Lnet/minecraft/class_2371;"
+      },
+      "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor": {
+        "inventory": "field_7836:Lnet/minecraft/class_1263;",
+        "entity": "field_7837:Lnet/minecraft/class_1496;"
+      },
+      "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor": {
+        "items": "field_6962:Lnet/minecraft/class_1277;"
+      },
+      "dev/atsukimc/shadowlink/mixin/WorldChunkMixin": {
+        "setLoadedToWorld": "Lnet/minecraft/class_2818;method_12226(Z)V",
+        "setBlockEntity": "Lnet/minecraft/class_2818;method_12007(Lnet/minecraft/class_2586;)V"
+      },
+      "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor": {
+        "inventory": "field_7735:Lnet/minecraft/class_2371;"
+      },
+      "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin": {
+        "tick": "Lnet/minecraft/server/MinecraftServer;method_3748(Ljava/util/function/BooleanSupplier;)V",
+        "shutdown": "Lnet/minecraft/server/MinecraftServer;method_3782()V"
+      },
+      "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor": {
+        "loadedToWorld": "field_12855:Z"
+      },
+      "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin": {
+        "onSlotClick": "Lnet/minecraft/class_1703;method_7593(IILnet/minecraft/class_1713;Lnet/minecraft/class_1657;)V"
+      }
+    }
+  }
+}
