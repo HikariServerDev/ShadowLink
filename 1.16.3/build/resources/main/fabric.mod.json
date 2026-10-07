@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "shadowlink",
+  "version": "1.0.2",
+  "name": "ShadowLink",
+  "description": "Detects vanilla Item Shadowing and restores the shared ItemStack reference after logout, chunk reload and server restart.",
+  "authors": ["AtsukiMC"],
+  "icon": "assets/shadowlink/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.atsukimc.shadowlink.ShadowLink"]
+  },
+  "mixins": ["shadowlink.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "minecraft": "1.16.3",
+    "java": ">=8"
+  }
+}
