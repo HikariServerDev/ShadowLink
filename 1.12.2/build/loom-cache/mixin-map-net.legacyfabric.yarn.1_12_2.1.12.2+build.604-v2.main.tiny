@@ -1,0 +1,3 @@
+v1	named	intermediary
+FIELD	dev/atsukimc/shadowlink/mixin/ChunkMixin	Lnet/minecraft/world/World;	world	field_4728
+FIELD	dev/atsukimc/shadowlink/mixin/ChunkMixin	Z	loaded	field_4727
