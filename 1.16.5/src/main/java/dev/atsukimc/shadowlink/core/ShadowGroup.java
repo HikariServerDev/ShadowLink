@@ -21,6 +21,13 @@ final class ShadowGroup {
         NbtCompound awaiting;
         /** Tick at which a reloaded slot first failed the content check, or -1. */
         int mismatchSince = -1;
+        /**
+         * What the slot had been deserialized with when this endpoint last came back, and the
+         * tick it did. A mod that loads the holder's own save data a second time shortly
+         * afterwards writes exactly this content into the slot again.
+         */
+        NbtCompound reloadedFrom;
+        int reloadedAt;
 
         Link(NbtCompound awaiting) {
             this.awaiting = awaiting;
