@@ -86,12 +86,6 @@ public final class ShadowManager {
      * after the holder was loaded; the final content is what has to be judged.
      */
     private static final int RELOAD_SETTLE_TICKS = 100;
-    /**
-     * How long after a reload a slot may be overwritten once more with its saved data and
-     * still be re-linked. Player data kept in an external database is applied on top of the
-     * player file some time after the login, depending on how fast that database answers.
-     */
-    private static final int REWRITE_WINDOW_TICKS = 600;
     private static final int MAX_ERROR_LOGS = 10;
 
     /** Hands the manager to the reflectively created {@link ShadowState}. */
@@ -306,7 +300,6 @@ public final class ShadowManager {
             this.unlink(previous, endpoint);
         }
         group.links.put(endpoint, new ShadowGroup.Link(awaiting));
-        group.gained = true;
         this.byEndpoint.put(endpoint, group);
         HolderKey holder = endpoint.holder();
         this.byHolder.computeIfAbsent(holder, key -> new LinkedHashSet<>()).add(endpoint);
@@ -684,25 +677,11 @@ public final class ShadowManager {
                     this.unlink(group, endpoint);
                     continue;
                 }
-                ItemStack current = InventoryAccess.get(inventory, endpoint.slot());
-                if (current == group.canonical) {
-                    continue;
-                }
-                if (this.isRewrittenCopy(group, current) || this.isReloadedAgain(group, group.links.get(endpoint), current)) {
-                    // The loaded holder was deserialized again in place (another mod restored
-                    // its inventory from NBT). Same lifecycle artefact as a reload: put the
-                    // canonical instance back. The discarded stack is an identical copy.
-                    InventoryAccess.set(inventory, endpoint.slot(), group.canonical);
-                    ShadowLink.LOGGER.debug("Shadow group {}: re-linked rewritten {}", group.id, endpoint);
-                } else {
-                    // Holder loaded, reference really gone: a genuine unshadowing.
-                    this.unlink(group, endpoint);
-                }
+                this.validateLoadedEndpoint(group, endpoint, inventory);
             }
         }
 
         for (ShadowGroup group : new ArrayList<>(this.groups.values())) {
-            group.gained = false;
             int active = 0;
             int unavailable = 0;
             for (ShadowGroup.Link link : group.links.values()) {
@@ -738,39 +717,14 @@ public final class ShadowManager {
     }
 
     /**
-     * Tells an in-place re-deserialization of a slot apart from an in-game unshadowing.
-     * <p>
-     * Vanilla never replaces a stack by an equal copy while leaving the original instance
-     * untouched: it either moves the instance (then it turns up in another slot or on a
-     * cursor, and the group gained an endpoint) or splits it (then the original is drained).
-     * So a slot that now holds a different instance with exactly the canonical content, while
-     * the canonical instance was not seen moving anywhere, was rewritten from NBT.
+     * A loaded slot with a different reference was unlinked. Equal content is not proof of
+     * a reload: normal replacements and external NBT rewrites can look exactly alike.
+     * Only restore() may replace a slot, after a recorded unload and a saved-state check.
      */
-    private boolean isRewrittenCopy(ShadowGroup group, ItemStack current) {
-        if (group.gained || current.isEmpty() || group.canonical.isEmpty() || this.byCanonical.containsKey(current)) {
-            return false;
+    private void validateLoadedEndpoint(ShadowGroup group, Endpoint endpoint, Inventory inventory) {
+        if (InventoryAccess.get(inventory, endpoint.slot()) != group.canonical) {
+            this.unlink(group, endpoint);
         }
-        return InventoryAccess.snapshotOf(current).equals(InventoryAccess.snapshotOf(group.canonical));
-    }
-
-    /**
-     * A holder that was just reloaded got its slot overwritten again with the data it had
-     * been saved with (not with the current state of the shared stack, which may have changed
-     * through the other holders in the meantime). That is the same stale copy the reload
-     * already replaced once, written by another mod loading the same save a second time.
-     */
-    private boolean isReloadedAgain(ShadowGroup group, ShadowGroup.Link link, ItemStack current) {
-        if (link.reloadedFrom == null) {
-            return false;
-        }
-        if (this.ticks - link.reloadedAt > REWRITE_WINDOW_TICKS) {
-            link.reloadedFrom = null;
-            return false;
-        }
-        if (group.gained || current.isEmpty() || group.canonical.isEmpty() || this.byCanonical.containsKey(current)) {
-            return false;
-        }
-        return InventoryAccess.snapshotOf(current).equals(link.reloadedFrom);
     }
 
     // ------------------------------------------------------------------------------------
@@ -950,8 +904,6 @@ public final class ShadowManager {
         if (current != group.canonical) {
             InventoryAccess.set(inventory, slot, group.canonical);
         }
-        link.reloadedFrom = link.awaiting;
-        link.reloadedAt = this.ticks;
         link.awaiting = null;
         this.markDirty();
         ShadowLink.LOGGER.debug("Shadow group {}: restored {}", group.id, endpoint);
@@ -1086,16 +1038,28 @@ public final class ShadowManager {
             if (!groupNbt.containsUuid("id")) {
                 continue;
             }
+            UUID id = groupNbt.getUuid("id");
+            // Reject duplicates before indexing any of their endpoints. Otherwise an older
+            // group remains in byEndpoint while groups holds a different object for its id.
+            if (this.groups.containsKey(id) || !groupNbt.contains("stack", TAG_COMPOUND)) {
+                continue;
+            }
             NbtCompound snapshot = groupNbt.getCompound("stack");
-            ShadowGroup group = new ShadowGroup(groupNbt.getUuid("id"), null, snapshot);
+            if (!validSnapshot(snapshot)) {
+                continue;
+            }
+            ShadowGroup group = new ShadowGroup(id, null, snapshot);
             NbtList endpointList = groupNbt.getList("endpoints", TAG_COMPOUND);
             for (int j = 0; j < endpointList.size(); j++) {
                 NbtCompound endpointNbt = endpointList.getCompound(j);
                 HolderKey holder = readHolder(endpointNbt);
-                if (holder == null) {
+                if (holder == null || !endpointNbt.contains("slot", 3) || endpointNbt.getInt("slot") < 0) {
                     continue;
                 }
                 NbtCompound awaiting = endpointNbt.contains("stack", TAG_COMPOUND) ? endpointNbt.getCompound("stack") : snapshot;
+                if ((endpointNbt.contains("stack") && !endpointNbt.contains("stack", TAG_COMPOUND)) || !validSnapshot(awaiting)) {
+                    continue;
+                }
                 Endpoint endpoint = new Endpoint(holder, endpointNbt.getInt("slot"));
                 if (!this.byEndpoint.containsKey(endpoint)) {
                     this.link(group, endpoint, awaiting);
@@ -1106,6 +1070,10 @@ public final class ShadowManager {
             }
             this.groups.put(group.id, group);
         }
+    }
+
+    private static boolean validSnapshot(NbtCompound snapshot) {
+        return snapshot.isEmpty() || !InventoryAccess.fromSnapshot(snapshot).isEmpty();
     }
 
     private static HolderKey readHolder(NbtCompound nbt) {

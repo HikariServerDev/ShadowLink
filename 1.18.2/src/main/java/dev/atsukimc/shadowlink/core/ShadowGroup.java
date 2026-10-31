@@ -21,13 +21,6 @@ final class ShadowGroup {
         NbtCompound awaiting;
         /** Tick at which a reloaded slot first failed the content check, or -1. */
         int mismatchSince = -1;
-        /**
-         * What the slot had been deserialized with when this endpoint last came back, and the
-         * tick it did. A mod that loads the holder's own save data a second time shortly
-         * afterwards writes exactly this content into the slot again.
-         */
-        NbtCompound reloadedFrom;
-        int reloadedAt;
 
         Link(NbtCompound awaiting) {
             this.awaiting = awaiting;
@@ -49,8 +42,6 @@ final class ShadowGroup {
     final Map<Endpoint, Link> links = new LinkedHashMap<>();
     /** Consecutive ticks with every endpoint loaded but fewer than two holding the instance. */
     int lonelyTicks;
-    /** An endpoint joined since the last validation pass, i.e. the instance was seen moving. */
-    boolean gained;
     /** A restore inconsistency was already reported (and the group no longer guesses). */
     boolean inconsistent;
 

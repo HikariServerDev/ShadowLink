@@ -1,0 +1,6 @@
+# Version projects keep their own build output; only the root JAR collection is published.
+**/.gradle/
+/*/build/
+/.build-*/
+**/logs/
+**/run/
