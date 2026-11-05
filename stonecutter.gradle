@@ -1,0 +1,21 @@
+plugins { id 'dev.kikugie.stonecutter' }
+
+stonecutter.active '1.18.2'
+
+tasks.register('chiseledBuild') {
+    group = 'build'
+    description = 'Build, test and collect every registered Minecraft target.'
+    dependsOn(stonecutter.versions.collect { ":${it.project}:buildAndCollect" })
+    doFirst {
+        if (project.hasProperty('targetMinecraft')) {
+            throw new GradleException('chiseledBuild requires the full target set; use :<version>:buildAndCollect for one target')
+        }
+    }
+    doLast {
+        exec {
+            commandLine 'python3', rootProject.file('scripts/collect-artifacts.py').absolutePath,
+                    '--input', rootProject.layout.buildDirectory.dir('collected').get().asFile.absolutePath,
+                    '--output', rootProject.layout.buildDirectory.dir('distributions').get().asFile.absolutePath
+        }
+    }
+}

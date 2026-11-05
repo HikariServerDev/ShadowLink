@@ -1,0 +1,21 @@
+import groovy.json.JsonSlurper
+
+// These Yarn names differ only in 1.16–1.16.4. Replacements cover main AND test sources.
+stonecutter.replacements.string(project.target.nbt_names == 'tag') { replacement ->
+    replacement.replace('NbtCompound', 'CompoundTag')
+}
+stonecutter.replacements.string(project.target.nbt_names == 'tag') { replacement ->
+    replacement.replace('NbtList', 'ListTag')
+}
+
+def rules = new JsonSlurper().parse(rootProject.file('gradle/mixins.json'))
+ext.mixinClasses = rules.findAll { name, condition ->
+    condition == 'true' || condition.split(' && ').every { predicate ->
+        stonecutter.eval(project.minecraft_version, predicate)
+    }
+}.keySet().toList()
+
+// Classes absent from a Minecraft API are excluded, rather than compiled and disabled at runtime.
+rules.keySet().findAll { !project.mixinClasses.contains(it) }.each { name ->
+    sourceSets.main.java.exclude("dev/atsukimc/shadowlink/mixin/${name}.java")
+}

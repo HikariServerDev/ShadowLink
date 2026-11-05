@@ -1,0 +1,3156 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "19ab5acd1ef40150b162bc35d8451a75b145bb47",
+  "mod_version": "1.0.4",
+  "targets": {
+    "1.12.2": {
+      "jar_sha256": "bff84ba2193280229c0d8ef9d5553729fd900543a547eae031148bd7bc6f174a",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "d08c672a100a35576ca2fae27f7ba61a1e931ba4164c16f9f963edae8e59a30d",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "7a43b8ec96256b6a22f3d8ab630e7d2271714a1b22787efbbfcf2920d4202bde",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "3aeea97ecb40ca95726d2230946baeab35d492071d7faf4795be2f0ab3e069d0",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "ad1c8f541b3956dd7ccce903860c7743a771ddacbc859a7fe5fa309f074bf066",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "f47629b1beff4d2db1ad917ad11799f4d8495b2ec1b6ab61ce9af0c880212b25",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "2479a4344f7fd1371dfd4c95365319e7cc798d89ea87797112653d2ea1f5ec1f",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "d50419629cf5ba1e850c5d28c4c98232222c022ba1ca5e342114629fab1e469d",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "20a172fa6da37ffa91454f9b2d85030ba6540f406d00a57f2bbcf722f0c5060d",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "d786c3f7ebc668a183296be67092d1f0b423f575e9e9803d09d907ad0634db7c",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "e09447c777ebaeb8a5ca2d1b3c2cb2f56346a9efc419d8f74a77238e2d03640e",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "2d47551815376be409ab2ba3dddbd6c7f9d6de3497b8ec169b3218d7b771e7fc",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "3ed969a7f089ba42875468582414b229162d0f574a5344d5b8f3098fe567712d",
+          "dev/atsukimc/shadowlink/mixin/ChunkAccessor.class": "b3c45ced24f70e6b5d389e976e99669629cde18c032a9b6f617ae5c7e513b7bf",
+          "dev/atsukimc/shadowlink/mixin/ChunkMixin.class": "d98c6c86be018dd546bdb9aa1f7ccb72134bb35d739b31c6ca00df2cd78fd452",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "b7fc9bfb95378c814542aed970794fe72d78ae0b40efbff4bf76e0b296ea3255",
+          "dev/atsukimc/shadowlink/mixin/FurnaceBlockEntityAccessor.class": "0238052d5c1dcd6158a31a0afb7b9da7200ddc8d551522a5791dbacc9e60190d",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "36aa23e4c02d6296a73c9ac9d0f1e8aba05a5fd49682422ddce303bf28ca7405",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "ad3fa51bf7d705dcaf46963061588588b52a10f2ff9b18bb16f8bdbc2b5be3c1",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "9a11aa7a1a23c6c1ebceb3eac124925d0d4724cf00459818070dcff2f09e49a9",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "7ca0e755406ddb913c659656678347c448f61784b2681affa41dad2f83933442",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "24359864023974d799dc3fbcbdfe5891b2cd6bb6646415dcd7b33affe1955961",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "9304b077581a4f96cf3be4d4dbcf215a7ff357a10df8d54ffe123daaeb6bac5c",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "9418607ea93ae1dbd57f9f81337b76125dba98d28f09eaf8307328682bdf8f43",
+          "dev/atsukimc/shadowlink/mixin/SlotAccessor.class": "31e716f278e4c6822f702c3535c2d5382dcd96dcff966c2106f04cfa4f662cbd",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "f1217e45d2414f261672468475a131d1ef4f1ebf18ab2f378d3e4058d1fb32d6",
+          "dev/atsukimc/shadowlink/mixin/WorldMixin.class": "c407dfb31339cd692f329eeb7b4043ac4d154079ad74f6dd78ca232644d13372"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "b9a71cc5292456587eed79821f96353c7bad6848b6a07a0cfc4f75d217959815",
+          "ShadowLink-1.12.2-refmap.json": "66b3a6deaf5bb432f4d3b58a16e282b975e9fdac3005261be67af2ba38ce805e",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "5ed53453860427c48ba9c6cddd73aa41fb52dd04f1741e843cb22c81a4bde923",
+          "shadowlink.mixins.json": "34e88662f0bd1b99784aff80a2d311e0d4522b8aa6595c028c25de280cfaeab3"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "3f7352d6a6e0b5f1347011cd69449bb4ca4f2bb2e9b905ae207503d61d28f6cc",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "7c00a863e8fdf78d40a49c4c529534b928ef0327f94183669bcdb313b0cb754a",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "f8e3191dbcd68bacac3108b67893ffa6d5d0401ed5a7a2c9d7071dc3f646bfeb",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "04b3eef595f1f0312683f71f671b178ee308d616079dc409d23f595099c60473",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "9419acf892dac5344f16f6bcd45ac352b7360025e842679212335bec9e452f2c",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "a72ae80615cb5ca63b338847344a4853da2a2fad28da0ef57cd5aa89a10d1147",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "5b9cc1d2d954cd6566db48ecaa6cd305aae49eb6db88228126474ff09f8c822e",
+        "main/java/dev/atsukimc/shadowlink/mixin/ChunkAccessor.java": "9ab5a26752fb3042124db77348ec906090b7af2921f2b8b45cb1b950dcb48007",
+        "main/java/dev/atsukimc/shadowlink/mixin/ChunkMixin.java": "cb9647a2cac6a151755c007de49aaa4ed7b5d0ea09afb1530c1e6ad1bb42e90e",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "573578138298c685296c310cb53056da555045e2a58f4ce3b48b618d090a921a",
+        "main/java/dev/atsukimc/shadowlink/mixin/FurnaceBlockEntityAccessor.java": "abf01ddc1d46ac487b8399db2f93fa14911175211b33ead3b54f0f8e1b1797a1",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "0154709c449a876a46fbe8a124d62dc4303b7bf09cd21adf53f187c43c1e0e36",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "e6d5fdb22beb8993b10a4f347c99e324c551b09a86da6563e1147c23ae28b741",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "45cec335e09e29dc880ee164b6b65e9c9b09b8628dd84bc4bac943082173510a",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "0e7b7c698944dc46b813a68dd6ec61e4d838d6f66c3eef1862dee458c0504118",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "7263744e5d450256b8ea29f8c4b928972edfb67aa4db3002a82792c844a51252",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "ac0cfe719f75ae6d7b069c47736532f81e7d5ba8b15c0fd91c5a311756eb7a65",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "f24facec9e2da594f19d0c8bc589801755ed4b957dc554a0c7fbf8f73af4b562",
+        "main/java/dev/atsukimc/shadowlink/mixin/SlotAccessor.java": "9d28a7287ce30f59c39f4af4d1b93784acd330f3f0fea955d4e870bcfed0843d",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldMixin.java": "879dcc37f9155066ea47c5d752d760a6fb5fdd9cc8d963e5016bb5eeffba2959",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "d13aa56be805b6120873f450afda6cd935f29ac788df1a88d5742088fb923375"
+      },
+      "dependencies": [
+        {
+          "module": "com.google.code.gson:gson:2.8.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:21.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j-core-mojang:51.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:1.5.25",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:1.3.9",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:realms:1.10.22",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.10.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.paulscode:codecjorbis:20101023",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.paulscode:codecwav:20101023",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.paulscode:libraryjavasound:20101123",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.paulscode:librarylwjglopenal:20100824",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.paulscode:soundsystem:20120107",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.10",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.1.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.github.llamalad7:mixinextras-fabric:0.3.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.9.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:7.1.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:fabric-loader:0.15.11",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.13.3+mixin.0.8.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:4.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:platform:3.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jinput:jinput:2.0.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jutils:jutils:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged-legacy-intermediary-1-v2:1.12.2-net.legacyfabric.yarn.1_12_2.1.12.2+build.604-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.3.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl.lwjgl:lwjgl:2.9.4+legacyfabric.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl.lwjgl:lwjgl_util:2.9.4+legacyfabric.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "oshi-project:oshi-core:1.1",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    },
+    "1.16": {
+      "jar_sha256": "21350e641fb009d855a36877b4c1d4c0ab60701eede6ed4b7d0d6b4d6632e022",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "d08c672a100a35576ca2fae27f7ba61a1e931ba4164c16f9f963edae8e59a30d",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "0f62b6601e2d6c67bbbc937e4ad3922084d4dbb45c7572df942c1adc7a62c605",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "3aeea97ecb40ca95726d2230946baeab35d492071d7faf4795be2f0ab3e069d0",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "ad1c8f541b3956dd7ccce903860c7743a771ddacbc859a7fe5fa309f074bf066",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "0af18826b4b0f49d9b7e7488e076ba0740230fbfcf0cc2faac52765a685967d6",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "3de560a1c2868b7653010926db28377ad8df0195fed0e5c8126054212eb1158d",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "cf850ffebd80052b28fe894d390137d6686d627c740c4f9e9d0c11de4092f888",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "c30448df1cb5dbecffb65ac6d2a8c99597a3fdf3dd12cf35612158af466115d1",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "d786c3f7ebc668a183296be67092d1f0b423f575e9e9803d09d907ad0634db7c",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "41b92b54ff76a3f0954d982ad57891ca818fbf9221e6bcf51a9a6b4f706d2c61",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "64ee069b00f23d079556b3682064faf9b8456b5bba6bb7018013fd7caa68ea50",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "8e2b68dab6bb8dad657d452707da97115e1da8efa7313b52759ef33cb6c843ba",
+          "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.class": "e09b289faa16eab5b8223b4b35f2c3854a852de8d691c87932784c04864a5e17",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "352b4f466e5cff20341fd4ad700437c732827a9d2e9990d9c4856cd4c5feb90a",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "0f4f6410f396397210e31e7e4b5c420cc83edf2f1bf3cb1892d9c31a64451555",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "acc393b64c61587ecc7d47ecc0ba1941fec0c7d4171511c2661457dd3a5d4078",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "eb09ceb3ebc9e5e96569b17f36d2419bb2303f262d906eca52c569ddb15fc10d",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "410c5a1d87dd3d009ec962a008fb326d55e9f89048a8cd33d8b523d355933f74",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "610001a6d0741112260e86ef35a24af61fd9f35dae08c7ea19db0d4608b5d5f0",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "083d2a64af05f2cc34ed70b857e3362422106b4f8b2dc645dd4a22aa3ca2d34d",
+          "dev/atsukimc/shadowlink/mixin/ServerWorldMixin.class": "955ef5b3977098021baa55df4d26c765341cea6822764a701c8f2f4a5c757d50",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "8498d466d7f6499fbe833161cf57cb6532525a8664bea18cc3b73d7f0a4b94a4",
+          "dev/atsukimc/shadowlink/mixin/SlotAccessor.class": "bd548f55262cc46790d510d114ca7f8e4f9ae47dfde84e81725c45f914008a40",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "aaf4838f3872250ff72f9af02b5027643f16c559453066ea002a7eeba7a96400",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.class": "420a0974762b2bd591913f1d7c61dfa8f1134cf176a0963cc39c7b03a590279a",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkMixin.class": "87e7800109cda4db868945f3e36b8d3b65955749f3beccea89e0679e60aada46"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "a2842c459932e20a3d2876f9576a43fb0c3c5d9d7989c5577dae4b71be864b30",
+          "ShadowLink-1.16-refmap.json": "a0d4ba770337a7d2dbf9e2a1f623774bb00265c62d42cdea9ed55c7306a2c5a3",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "f2323c545e16b9bb8feb0249aeb39b6a864e801a4fa8c114a3e82f80e3dd8149",
+          "shadowlink.mixins.json": "d4539177af3487887040a03d496b3a14678c856684c54a6a3282f8c8b83389a5"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "2f874b53bd4b1e09b6cd45526a83166a5f3078a932bfe63e590a5c7b8dd53d6c",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "7c00a863e8fdf78d40a49c4c529534b928ef0327f94183669bcdb313b0cb754a",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "c1cfec52f96b21c471d9ffe819959afab47ea5e363a07d161ea9902b11f1add4",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "a60f962938630bd6ae58a47f2c666b228972b44ec4f7bfec6448a74bd98adadf",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "67caf8674eb86ae3abe721d20f4a220295f8c125e89c3e8efcdba2847ae44070",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "f90c6762ffdebc1d099add6c38e8c2ad2d4c82d95c31d36cb2203db7994b4ec4",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "48290a3934ff65f674a5f355c251845967378673235c935702ea0f9a29e2fd7d",
+        "main/java/dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.java": "6dce5a03f79a0bef5e17000180ce7ecc0252dc75b814d2492bb9f49129bdb12a",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "1c82c552e71c4df1bd94f3b72eb52d42d44b299f5fbe489d3ebffc09d3e0d13d",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "f36feea7421a82341940f2a80ffc12e9550c1646e984627424b89e5f705bfea7",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "f3cd5956cba3effcc2be7dbbe92e5943ab25a24e33f4a3552e27c12b7cce73c9",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "678fde600e167c2b79da20db8fb1384a3b0aad319b18d87ac6ddefb13622d8d6",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "c8752d36307b01380036ed5c8a6a87ca2260c9dd428d61f1b773cbb50740b74e",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "e4efbabb70ced2ca5197dda8d3236ccaf51b0b8c57261b0a5191d878101dd483",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "9cca1a1131c4e22f3364d55744fa40ae269eea56d28f7317c4ead6022570a131",
+        "main/java/dev/atsukimc/shadowlink/mixin/ServerWorldMixin.java": "5cbd561a3246635b2a5946a626c6a60f0b1bb3b53289fc844d4ad84dae59e3fd",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "23cb0c9f0b57039db3d8bd357ab998b0a3f72e5c949242698b321d81cb88d6aa",
+        "main/java/dev/atsukimc/shadowlink/mixin/SlotAccessor.java": "130d6192580824ea5436ee0a8aa58857d3a418fc2a28dbb6a4060ce551dfbdf8",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.java": "b55efb4fd234cb7d46d65a26a4d66a805c51aaa7538dd3afdf6655c3e98dd6fb",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkMixin.java": "7df3cef0ee156a700f680f5aa891635220447a0535b1106d3935dbb9b701a7c4",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "49ac480a4b2a9f2eb208ca1d456ae0d3c6dcf525ea9508b0f3f46e2fc1fc4a79"
+      },
+      "dependencies": [
+        {
+          "module": "com.google.code.gson:gson:2.8.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:21.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.jimfs:jimfs:1.2-fabric",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j:66.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:1.6.25",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:brigadier:1.0.17",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:datafixerupper:3.0.25",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:javabridge:1.0.22",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:1.3.9",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.10",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.1.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.25.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:8.2.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:access-widener:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:fabric-loader-sat4j:2.3.5.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.9.2+mixin.0.8.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-mappings-parser:0.2.2.14",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-remapper:0.3.0.70",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:4.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:platform:3.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jinput:jinput:2.0.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jutils:jutils:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged:1.16-net.fabricmc.yarn.1_16.1.16+build.4-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net_fabricmc_yarn_1_16_1_16_build_4_v2.net.fabricmc:fabric-loader:0.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.3.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-glfw:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-jemalloc:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-openal:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-opengl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-stb:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-tinyfd:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "oshi-project:oshi-core:1.1",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    },
+    "1.16.1": {
+      "jar_sha256": "4abb4de0a4da797c6bd1597aa2f55586af247640a42e7f61caf03fd9b6851acd",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "d08c672a100a35576ca2fae27f7ba61a1e931ba4164c16f9f963edae8e59a30d",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "0f62b6601e2d6c67bbbc937e4ad3922084d4dbb45c7572df942c1adc7a62c605",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "3aeea97ecb40ca95726d2230946baeab35d492071d7faf4795be2f0ab3e069d0",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "ad1c8f541b3956dd7ccce903860c7743a771ddacbc859a7fe5fa309f074bf066",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "0af18826b4b0f49d9b7e7488e076ba0740230fbfcf0cc2faac52765a685967d6",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "3de560a1c2868b7653010926db28377ad8df0195fed0e5c8126054212eb1158d",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "cf850ffebd80052b28fe894d390137d6686d627c740c4f9e9d0c11de4092f888",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "c30448df1cb5dbecffb65ac6d2a8c99597a3fdf3dd12cf35612158af466115d1",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "d786c3f7ebc668a183296be67092d1f0b423f575e9e9803d09d907ad0634db7c",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "41b92b54ff76a3f0954d982ad57891ca818fbf9221e6bcf51a9a6b4f706d2c61",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "64ee069b00f23d079556b3682064faf9b8456b5bba6bb7018013fd7caa68ea50",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "8e2b68dab6bb8dad657d452707da97115e1da8efa7313b52759ef33cb6c843ba",
+          "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.class": "e09b289faa16eab5b8223b4b35f2c3854a852de8d691c87932784c04864a5e17",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "352b4f466e5cff20341fd4ad700437c732827a9d2e9990d9c4856cd4c5feb90a",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "0f4f6410f396397210e31e7e4b5c420cc83edf2f1bf3cb1892d9c31a64451555",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "acc393b64c61587ecc7d47ecc0ba1941fec0c7d4171511c2661457dd3a5d4078",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "eb09ceb3ebc9e5e96569b17f36d2419bb2303f262d906eca52c569ddb15fc10d",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "410c5a1d87dd3d009ec962a008fb326d55e9f89048a8cd33d8b523d355933f74",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "610001a6d0741112260e86ef35a24af61fd9f35dae08c7ea19db0d4608b5d5f0",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "083d2a64af05f2cc34ed70b857e3362422106b4f8b2dc645dd4a22aa3ca2d34d",
+          "dev/atsukimc/shadowlink/mixin/ServerWorldMixin.class": "955ef5b3977098021baa55df4d26c765341cea6822764a701c8f2f4a5c757d50",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "8498d466d7f6499fbe833161cf57cb6532525a8664bea18cc3b73d7f0a4b94a4",
+          "dev/atsukimc/shadowlink/mixin/SlotAccessor.class": "bd548f55262cc46790d510d114ca7f8e4f9ae47dfde84e81725c45f914008a40",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "aaf4838f3872250ff72f9af02b5027643f16c559453066ea002a7eeba7a96400",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.class": "420a0974762b2bd591913f1d7c61dfa8f1134cf176a0963cc39c7b03a590279a",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkMixin.class": "87e7800109cda4db868945f3e36b8d3b65955749f3beccea89e0679e60aada46"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "7f7dafbb45eaa456144c56a85f08ab0a0112c1ca5a1136936eccf73e3588c899",
+          "ShadowLink-1.16.1-refmap.json": "a0d4ba770337a7d2dbf9e2a1f623774bb00265c62d42cdea9ed55c7306a2c5a3",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "4226c8fa4c7f6fa2c5f324ba1f1705e6f22a8f78934a1220faba092382298950",
+          "shadowlink.mixins.json": "445d7a6d5df9cba039bd40a6f396a8dd00baecd67d03813af2bb95d6dd6b8ca2"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "2f874b53bd4b1e09b6cd45526a83166a5f3078a932bfe63e590a5c7b8dd53d6c",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "7c00a863e8fdf78d40a49c4c529534b928ef0327f94183669bcdb313b0cb754a",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "c1cfec52f96b21c471d9ffe819959afab47ea5e363a07d161ea9902b11f1add4",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "a60f962938630bd6ae58a47f2c666b228972b44ec4f7bfec6448a74bd98adadf",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "67caf8674eb86ae3abe721d20f4a220295f8c125e89c3e8efcdba2847ae44070",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "f90c6762ffdebc1d099add6c38e8c2ad2d4c82d95c31d36cb2203db7994b4ec4",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "48290a3934ff65f674a5f355c251845967378673235c935702ea0f9a29e2fd7d",
+        "main/java/dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.java": "6dce5a03f79a0bef5e17000180ce7ecc0252dc75b814d2492bb9f49129bdb12a",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "1c82c552e71c4df1bd94f3b72eb52d42d44b299f5fbe489d3ebffc09d3e0d13d",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "f36feea7421a82341940f2a80ffc12e9550c1646e984627424b89e5f705bfea7",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "f3cd5956cba3effcc2be7dbbe92e5943ab25a24e33f4a3552e27c12b7cce73c9",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "678fde600e167c2b79da20db8fb1384a3b0aad319b18d87ac6ddefb13622d8d6",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "c8752d36307b01380036ed5c8a6a87ca2260c9dd428d61f1b773cbb50740b74e",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "e4efbabb70ced2ca5197dda8d3236ccaf51b0b8c57261b0a5191d878101dd483",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "9cca1a1131c4e22f3364d55744fa40ae269eea56d28f7317c4ead6022570a131",
+        "main/java/dev/atsukimc/shadowlink/mixin/ServerWorldMixin.java": "5cbd561a3246635b2a5946a626c6a60f0b1bb3b53289fc844d4ad84dae59e3fd",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "23cb0c9f0b57039db3d8bd357ab998b0a3f72e5c949242698b321d81cb88d6aa",
+        "main/java/dev/atsukimc/shadowlink/mixin/SlotAccessor.java": "130d6192580824ea5436ee0a8aa58857d3a418fc2a28dbb6a4060ce551dfbdf8",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.java": "b55efb4fd234cb7d46d65a26a4d66a805c51aaa7538dd3afdf6655c3e98dd6fb",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkMixin.java": "7df3cef0ee156a700f680f5aa891635220447a0535b1106d3935dbb9b701a7c4",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "49ac480a4b2a9f2eb208ca1d456ae0d3c6dcf525ea9508b0f3f46e2fc1fc4a79"
+      },
+      "dependencies": [
+        {
+          "module": "com.google.code.gson:gson:2.8.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:21.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.jimfs:jimfs:1.2-fabric",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j:66.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:1.6.25",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:brigadier:1.0.17",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:datafixerupper:3.0.25",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:javabridge:1.0.22",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:1.3.9",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.10",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.1.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.25.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:8.2.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:access-widener:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:fabric-loader-sat4j:2.3.5.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.9.2+mixin.0.8.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-mappings-parser:0.2.2.14",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-remapper:0.3.0.70",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:4.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:platform:3.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jinput:jinput:2.0.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jutils:jutils:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged:1.16.1-net.fabricmc.yarn.1_16_1.1.16.1+build.21-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net_fabricmc_yarn_1_16_1_1_16_1_build_21_v2.net.fabricmc:fabric-loader:0.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.3.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-glfw:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-jemalloc:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-openal:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-opengl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-stb:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-tinyfd:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "oshi-project:oshi-core:1.1",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    },
+    "1.16.2": {
+      "jar_sha256": "096ccd97df9a29e068c67c4b1a80bb4c3c39fa188d1a0dbb55444cbede24a1a3",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "d08c672a100a35576ca2fae27f7ba61a1e931ba4164c16f9f963edae8e59a30d",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "0f62b6601e2d6c67bbbc937e4ad3922084d4dbb45c7572df942c1adc7a62c605",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "3aeea97ecb40ca95726d2230946baeab35d492071d7faf4795be2f0ab3e069d0",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "ad1c8f541b3956dd7ccce903860c7743a771ddacbc859a7fe5fa309f074bf066",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "0af18826b4b0f49d9b7e7488e076ba0740230fbfcf0cc2faac52765a685967d6",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "3de560a1c2868b7653010926db28377ad8df0195fed0e5c8126054212eb1158d",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "cf850ffebd80052b28fe894d390137d6686d627c740c4f9e9d0c11de4092f888",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "c30448df1cb5dbecffb65ac6d2a8c99597a3fdf3dd12cf35612158af466115d1",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "d786c3f7ebc668a183296be67092d1f0b423f575e9e9803d09d907ad0634db7c",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "41b92b54ff76a3f0954d982ad57891ca818fbf9221e6bcf51a9a6b4f706d2c61",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "64ee069b00f23d079556b3682064faf9b8456b5bba6bb7018013fd7caa68ea50",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "8e2b68dab6bb8dad657d452707da97115e1da8efa7313b52759ef33cb6c843ba",
+          "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.class": "e09b289faa16eab5b8223b4b35f2c3854a852de8d691c87932784c04864a5e17",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "352b4f466e5cff20341fd4ad700437c732827a9d2e9990d9c4856cd4c5feb90a",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "0f4f6410f396397210e31e7e4b5c420cc83edf2f1bf3cb1892d9c31a64451555",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "acc393b64c61587ecc7d47ecc0ba1941fec0c7d4171511c2661457dd3a5d4078",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "eb09ceb3ebc9e5e96569b17f36d2419bb2303f262d906eca52c569ddb15fc10d",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "410c5a1d87dd3d009ec962a008fb326d55e9f89048a8cd33d8b523d355933f74",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "610001a6d0741112260e86ef35a24af61fd9f35dae08c7ea19db0d4608b5d5f0",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "083d2a64af05f2cc34ed70b857e3362422106b4f8b2dc645dd4a22aa3ca2d34d",
+          "dev/atsukimc/shadowlink/mixin/ServerWorldMixin.class": "955ef5b3977098021baa55df4d26c765341cea6822764a701c8f2f4a5c757d50",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "8498d466d7f6499fbe833161cf57cb6532525a8664bea18cc3b73d7f0a4b94a4",
+          "dev/atsukimc/shadowlink/mixin/SlotAccessor.class": "bd548f55262cc46790d510d114ca7f8e4f9ae47dfde84e81725c45f914008a40",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "aaf4838f3872250ff72f9af02b5027643f16c559453066ea002a7eeba7a96400",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.class": "420a0974762b2bd591913f1d7c61dfa8f1134cf176a0963cc39c7b03a590279a",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkMixin.class": "87e7800109cda4db868945f3e36b8d3b65955749f3beccea89e0679e60aada46"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "017f5a6ef3b00ce96ec9bf759f3f9b0b3f847a5a72a8f8621976a9d6d3acdc44",
+          "ShadowLink-1.16.2-refmap.json": "a0d4ba770337a7d2dbf9e2a1f623774bb00265c62d42cdea9ed55c7306a2c5a3",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "f5e7554adb5b6e0a845b2b0550d52122e24b232e26f16da72fe0c2318851d740",
+          "shadowlink.mixins.json": "029917da977f61dde4a63ed5ab5a50babedc356fa6a31252ef4c5b7b28a388cb"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "2f874b53bd4b1e09b6cd45526a83166a5f3078a932bfe63e590a5c7b8dd53d6c",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "7c00a863e8fdf78d40a49c4c529534b928ef0327f94183669bcdb313b0cb754a",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "c1cfec52f96b21c471d9ffe819959afab47ea5e363a07d161ea9902b11f1add4",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "a60f962938630bd6ae58a47f2c666b228972b44ec4f7bfec6448a74bd98adadf",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "67caf8674eb86ae3abe721d20f4a220295f8c125e89c3e8efcdba2847ae44070",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "f90c6762ffdebc1d099add6c38e8c2ad2d4c82d95c31d36cb2203db7994b4ec4",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "48290a3934ff65f674a5f355c251845967378673235c935702ea0f9a29e2fd7d",
+        "main/java/dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.java": "6dce5a03f79a0bef5e17000180ce7ecc0252dc75b814d2492bb9f49129bdb12a",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "1c82c552e71c4df1bd94f3b72eb52d42d44b299f5fbe489d3ebffc09d3e0d13d",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "f36feea7421a82341940f2a80ffc12e9550c1646e984627424b89e5f705bfea7",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "f3cd5956cba3effcc2be7dbbe92e5943ab25a24e33f4a3552e27c12b7cce73c9",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "678fde600e167c2b79da20db8fb1384a3b0aad319b18d87ac6ddefb13622d8d6",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "c8752d36307b01380036ed5c8a6a87ca2260c9dd428d61f1b773cbb50740b74e",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "e4efbabb70ced2ca5197dda8d3236ccaf51b0b8c57261b0a5191d878101dd483",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "9cca1a1131c4e22f3364d55744fa40ae269eea56d28f7317c4ead6022570a131",
+        "main/java/dev/atsukimc/shadowlink/mixin/ServerWorldMixin.java": "5cbd561a3246635b2a5946a626c6a60f0b1bb3b53289fc844d4ad84dae59e3fd",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "23cb0c9f0b57039db3d8bd357ab998b0a3f72e5c949242698b321d81cb88d6aa",
+        "main/java/dev/atsukimc/shadowlink/mixin/SlotAccessor.java": "130d6192580824ea5436ee0a8aa58857d3a418fc2a28dbb6a4060ce551dfbdf8",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.java": "b55efb4fd234cb7d46d65a26a4d66a805c51aaa7538dd3afdf6655c3e98dd6fb",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkMixin.java": "7df3cef0ee156a700f680f5aa891635220447a0535b1106d3935dbb9b701a7c4",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "49ac480a4b2a9f2eb208ca1d456ae0d3c6dcf525ea9508b0f3f46e2fc1fc4a79"
+      },
+      "dependencies": [
+        {
+          "module": "com.google.code.gson:gson:2.8.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:21.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.jimfs:jimfs:1.2-fabric",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j:66.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:1.6.25",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:brigadier:1.0.17",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:datafixerupper:4.0.26",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:javabridge:1.0.22",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:1.3.9",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.10",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.1.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.25.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:8.2.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:access-widener:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:fabric-loader-sat4j:2.3.5.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.9.2+mixin.0.8.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-mappings-parser:0.2.2.14",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-remapper:0.3.0.70",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:4.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:platform:3.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jinput:jinput:2.0.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jutils:jutils:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged:1.16.2-net.fabricmc.yarn.1_16_2.1.16.2+build.47-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net_fabricmc_yarn_1_16_2_1_16_2_build_47_v2.net.fabricmc:fabric-loader:0.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.3.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-glfw:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-jemalloc:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-openal:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-opengl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-stb:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-tinyfd:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "oshi-project:oshi-core:1.1",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    },
+    "1.16.3": {
+      "jar_sha256": "1d3a81aed21e25367980c7e59463a10525e06241dd10ef6f59881b5d05dc418e",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "d08c672a100a35576ca2fae27f7ba61a1e931ba4164c16f9f963edae8e59a30d",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "0f62b6601e2d6c67bbbc937e4ad3922084d4dbb45c7572df942c1adc7a62c605",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "3aeea97ecb40ca95726d2230946baeab35d492071d7faf4795be2f0ab3e069d0",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "ad1c8f541b3956dd7ccce903860c7743a771ddacbc859a7fe5fa309f074bf066",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "0af18826b4b0f49d9b7e7488e076ba0740230fbfcf0cc2faac52765a685967d6",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "3de560a1c2868b7653010926db28377ad8df0195fed0e5c8126054212eb1158d",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "cf850ffebd80052b28fe894d390137d6686d627c740c4f9e9d0c11de4092f888",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "c30448df1cb5dbecffb65ac6d2a8c99597a3fdf3dd12cf35612158af466115d1",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "d786c3f7ebc668a183296be67092d1f0b423f575e9e9803d09d907ad0634db7c",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "41b92b54ff76a3f0954d982ad57891ca818fbf9221e6bcf51a9a6b4f706d2c61",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "64ee069b00f23d079556b3682064faf9b8456b5bba6bb7018013fd7caa68ea50",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "8e2b68dab6bb8dad657d452707da97115e1da8efa7313b52759ef33cb6c843ba",
+          "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.class": "e09b289faa16eab5b8223b4b35f2c3854a852de8d691c87932784c04864a5e17",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "352b4f466e5cff20341fd4ad700437c732827a9d2e9990d9c4856cd4c5feb90a",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "0f4f6410f396397210e31e7e4b5c420cc83edf2f1bf3cb1892d9c31a64451555",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "acc393b64c61587ecc7d47ecc0ba1941fec0c7d4171511c2661457dd3a5d4078",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "eb09ceb3ebc9e5e96569b17f36d2419bb2303f262d906eca52c569ddb15fc10d",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "410c5a1d87dd3d009ec962a008fb326d55e9f89048a8cd33d8b523d355933f74",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "610001a6d0741112260e86ef35a24af61fd9f35dae08c7ea19db0d4608b5d5f0",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "083d2a64af05f2cc34ed70b857e3362422106b4f8b2dc645dd4a22aa3ca2d34d",
+          "dev/atsukimc/shadowlink/mixin/ServerWorldMixin.class": "955ef5b3977098021baa55df4d26c765341cea6822764a701c8f2f4a5c757d50",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "8498d466d7f6499fbe833161cf57cb6532525a8664bea18cc3b73d7f0a4b94a4",
+          "dev/atsukimc/shadowlink/mixin/SlotAccessor.class": "bd548f55262cc46790d510d114ca7f8e4f9ae47dfde84e81725c45f914008a40",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "aaf4838f3872250ff72f9af02b5027643f16c559453066ea002a7eeba7a96400",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.class": "420a0974762b2bd591913f1d7c61dfa8f1134cf176a0963cc39c7b03a590279a",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkMixin.class": "87e7800109cda4db868945f3e36b8d3b65955749f3beccea89e0679e60aada46"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "66ba668233a3b1fd3e5983c55907b1b535daeed485598b0d9637d7d8cfa6b690",
+          "ShadowLink-1.16.3-refmap.json": "a0d4ba770337a7d2dbf9e2a1f623774bb00265c62d42cdea9ed55c7306a2c5a3",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "1228d96dc33513825c2565228d515df23b49de8a515fb9acf93cb6fdc2191127",
+          "shadowlink.mixins.json": "114253b98970f858097f0a8efd21547667b6f9c7cf798b8e2f7144fd97d3bc72"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "2f874b53bd4b1e09b6cd45526a83166a5f3078a932bfe63e590a5c7b8dd53d6c",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "7c00a863e8fdf78d40a49c4c529534b928ef0327f94183669bcdb313b0cb754a",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "c1cfec52f96b21c471d9ffe819959afab47ea5e363a07d161ea9902b11f1add4",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "a60f962938630bd6ae58a47f2c666b228972b44ec4f7bfec6448a74bd98adadf",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "67caf8674eb86ae3abe721d20f4a220295f8c125e89c3e8efcdba2847ae44070",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "f90c6762ffdebc1d099add6c38e8c2ad2d4c82d95c31d36cb2203db7994b4ec4",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "48290a3934ff65f674a5f355c251845967378673235c935702ea0f9a29e2fd7d",
+        "main/java/dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.java": "6dce5a03f79a0bef5e17000180ce7ecc0252dc75b814d2492bb9f49129bdb12a",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "1c82c552e71c4df1bd94f3b72eb52d42d44b299f5fbe489d3ebffc09d3e0d13d",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "f36feea7421a82341940f2a80ffc12e9550c1646e984627424b89e5f705bfea7",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "f3cd5956cba3effcc2be7dbbe92e5943ab25a24e33f4a3552e27c12b7cce73c9",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "678fde600e167c2b79da20db8fb1384a3b0aad319b18d87ac6ddefb13622d8d6",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "c8752d36307b01380036ed5c8a6a87ca2260c9dd428d61f1b773cbb50740b74e",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "e4efbabb70ced2ca5197dda8d3236ccaf51b0b8c57261b0a5191d878101dd483",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "9cca1a1131c4e22f3364d55744fa40ae269eea56d28f7317c4ead6022570a131",
+        "main/java/dev/atsukimc/shadowlink/mixin/ServerWorldMixin.java": "5cbd561a3246635b2a5946a626c6a60f0b1bb3b53289fc844d4ad84dae59e3fd",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "23cb0c9f0b57039db3d8bd357ab998b0a3f72e5c949242698b321d81cb88d6aa",
+        "main/java/dev/atsukimc/shadowlink/mixin/SlotAccessor.java": "130d6192580824ea5436ee0a8aa58857d3a418fc2a28dbb6a4060ce551dfbdf8",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.java": "b55efb4fd234cb7d46d65a26a4d66a805c51aaa7538dd3afdf6655c3e98dd6fb",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkMixin.java": "7df3cef0ee156a700f680f5aa891635220447a0535b1106d3935dbb9b701a7c4",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "49ac480a4b2a9f2eb208ca1d456ae0d3c6dcf525ea9508b0f3f46e2fc1fc4a79"
+      },
+      "dependencies": [
+        {
+          "module": "com.google.code.gson:gson:2.8.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:21.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.jimfs:jimfs:1.2-fabric",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j:66.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:1.6.25",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:brigadier:1.0.17",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:datafixerupper:4.0.26",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:javabridge:1.0.22",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:1.3.9",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.10",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.1.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.25.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:8.2.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:access-widener:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:fabric-loader-sat4j:2.3.5.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.9.2+mixin.0.8.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-mappings-parser:0.2.2.14",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-remapper:0.3.0.70",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:4.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:platform:3.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jinput:jinput:2.0.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jutils:jutils:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged:1.16.3-net.fabricmc.yarn.1_16_3.1.16.3+build.47-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net_fabricmc_yarn_1_16_3_1_16_3_build_47_v2.net.fabricmc:fabric-loader:0.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.3.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-glfw:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-jemalloc:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-openal:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-opengl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-stb:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-tinyfd:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "oshi-project:oshi-core:1.1",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    },
+    "1.16.4": {
+      "jar_sha256": "e5bd158eaf9e3f36b9cf32c5283ee7b5176523878ac6a132fedb8cbf710248b4",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "d08c672a100a35576ca2fae27f7ba61a1e931ba4164c16f9f963edae8e59a30d",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "0f62b6601e2d6c67bbbc937e4ad3922084d4dbb45c7572df942c1adc7a62c605",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "3aeea97ecb40ca95726d2230946baeab35d492071d7faf4795be2f0ab3e069d0",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "ad1c8f541b3956dd7ccce903860c7743a771ddacbc859a7fe5fa309f074bf066",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "0af18826b4b0f49d9b7e7488e076ba0740230fbfcf0cc2faac52765a685967d6",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "3de560a1c2868b7653010926db28377ad8df0195fed0e5c8126054212eb1158d",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "cf850ffebd80052b28fe894d390137d6686d627c740c4f9e9d0c11de4092f888",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "c30448df1cb5dbecffb65ac6d2a8c99597a3fdf3dd12cf35612158af466115d1",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "d786c3f7ebc668a183296be67092d1f0b423f575e9e9803d09d907ad0634db7c",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "41b92b54ff76a3f0954d982ad57891ca818fbf9221e6bcf51a9a6b4f706d2c61",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "64ee069b00f23d079556b3682064faf9b8456b5bba6bb7018013fd7caa68ea50",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "8e2b68dab6bb8dad657d452707da97115e1da8efa7313b52759ef33cb6c843ba",
+          "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.class": "e09b289faa16eab5b8223b4b35f2c3854a852de8d691c87932784c04864a5e17",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "352b4f466e5cff20341fd4ad700437c732827a9d2e9990d9c4856cd4c5feb90a",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "0f4f6410f396397210e31e7e4b5c420cc83edf2f1bf3cb1892d9c31a64451555",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "acc393b64c61587ecc7d47ecc0ba1941fec0c7d4171511c2661457dd3a5d4078",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "eb09ceb3ebc9e5e96569b17f36d2419bb2303f262d906eca52c569ddb15fc10d",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "410c5a1d87dd3d009ec962a008fb326d55e9f89048a8cd33d8b523d355933f74",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "610001a6d0741112260e86ef35a24af61fd9f35dae08c7ea19db0d4608b5d5f0",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "083d2a64af05f2cc34ed70b857e3362422106b4f8b2dc645dd4a22aa3ca2d34d",
+          "dev/atsukimc/shadowlink/mixin/ServerWorldMixin.class": "955ef5b3977098021baa55df4d26c765341cea6822764a701c8f2f4a5c757d50",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "8498d466d7f6499fbe833161cf57cb6532525a8664bea18cc3b73d7f0a4b94a4",
+          "dev/atsukimc/shadowlink/mixin/SlotAccessor.class": "bd548f55262cc46790d510d114ca7f8e4f9ae47dfde84e81725c45f914008a40",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "aaf4838f3872250ff72f9af02b5027643f16c559453066ea002a7eeba7a96400",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.class": "420a0974762b2bd591913f1d7c61dfa8f1134cf176a0963cc39c7b03a590279a",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkMixin.class": "87e7800109cda4db868945f3e36b8d3b65955749f3beccea89e0679e60aada46"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "76127a97427b7032b34cfdb2c60672b8d74dab0af2c87885992663a3ac8b1daa",
+          "ShadowLink-1.16.4-refmap.json": "a0d4ba770337a7d2dbf9e2a1f623774bb00265c62d42cdea9ed55c7306a2c5a3",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "916f96ec3ddf7c8c8ac7699ed0407e967ce2abe79330f039c74fad8c937bcfea",
+          "shadowlink.mixins.json": "e555039b50af643b9c618c87021a4e04a7d332d69f6c922cba633e7357e8f271"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "2f874b53bd4b1e09b6cd45526a83166a5f3078a932bfe63e590a5c7b8dd53d6c",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "7c00a863e8fdf78d40a49c4c529534b928ef0327f94183669bcdb313b0cb754a",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "c1cfec52f96b21c471d9ffe819959afab47ea5e363a07d161ea9902b11f1add4",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "a60f962938630bd6ae58a47f2c666b228972b44ec4f7bfec6448a74bd98adadf",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "67caf8674eb86ae3abe721d20f4a220295f8c125e89c3e8efcdba2847ae44070",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "f90c6762ffdebc1d099add6c38e8c2ad2d4c82d95c31d36cb2203db7994b4ec4",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "48290a3934ff65f674a5f355c251845967378673235c935702ea0f9a29e2fd7d",
+        "main/java/dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.java": "6dce5a03f79a0bef5e17000180ce7ecc0252dc75b814d2492bb9f49129bdb12a",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "1c82c552e71c4df1bd94f3b72eb52d42d44b299f5fbe489d3ebffc09d3e0d13d",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "f36feea7421a82341940f2a80ffc12e9550c1646e984627424b89e5f705bfea7",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "f3cd5956cba3effcc2be7dbbe92e5943ab25a24e33f4a3552e27c12b7cce73c9",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "678fde600e167c2b79da20db8fb1384a3b0aad319b18d87ac6ddefb13622d8d6",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "c8752d36307b01380036ed5c8a6a87ca2260c9dd428d61f1b773cbb50740b74e",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "e4efbabb70ced2ca5197dda8d3236ccaf51b0b8c57261b0a5191d878101dd483",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "9cca1a1131c4e22f3364d55744fa40ae269eea56d28f7317c4ead6022570a131",
+        "main/java/dev/atsukimc/shadowlink/mixin/ServerWorldMixin.java": "5cbd561a3246635b2a5946a626c6a60f0b1bb3b53289fc844d4ad84dae59e3fd",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "23cb0c9f0b57039db3d8bd357ab998b0a3f72e5c949242698b321d81cb88d6aa",
+        "main/java/dev/atsukimc/shadowlink/mixin/SlotAccessor.java": "130d6192580824ea5436ee0a8aa58857d3a418fc2a28dbb6a4060ce551dfbdf8",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.java": "b55efb4fd234cb7d46d65a26a4d66a805c51aaa7538dd3afdf6655c3e98dd6fb",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkMixin.java": "7df3cef0ee156a700f680f5aa891635220447a0535b1106d3935dbb9b701a7c4",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "49ac480a4b2a9f2eb208ca1d456ae0d3c6dcf525ea9508b0f3f46e2fc1fc4a79"
+      },
+      "dependencies": [
+        {
+          "module": "com.google.code.gson:gson:2.8.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:21.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.jimfs:jimfs:1.2-fabric",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j:66.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:2.1.28",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:brigadier:1.0.17",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:datafixerupper:4.0.26",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:javabridge:1.0.22",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:1.3.9",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.10",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.1.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.25.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:8.2.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:access-widener:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:fabric-loader-sat4j:2.3.5.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.9.2+mixin.0.8.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-mappings-parser:0.2.2.14",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-remapper:0.3.0.70",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:4.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:platform:3.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jinput:jinput:2.0.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jutils:jutils:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged:1.16.4-net.fabricmc.yarn.1_16_4.1.16.4+build.9-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net_fabricmc_yarn_1_16_4_1_16_4_build_9_v2.net.fabricmc:fabric-loader:0.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.3.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-glfw:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-jemalloc:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-openal:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-opengl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-stb:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-tinyfd:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "oshi-project:oshi-core:1.1",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    },
+    "1.16.5": {
+      "jar_sha256": "a467f0d22149adfbb33ccbc11e78f9d1d261284ffa34c1124c28dbbb13f46084",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "d08c672a100a35576ca2fae27f7ba61a1e931ba4164c16f9f963edae8e59a30d",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "0f62b6601e2d6c67bbbc937e4ad3922084d4dbb45c7572df942c1adc7a62c605",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "3aeea97ecb40ca95726d2230946baeab35d492071d7faf4795be2f0ab3e069d0",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "ad1c8f541b3956dd7ccce903860c7743a771ddacbc859a7fe5fa309f074bf066",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "0af18826b4b0f49d9b7e7488e076ba0740230fbfcf0cc2faac52765a685967d6",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "3de560a1c2868b7653010926db28377ad8df0195fed0e5c8126054212eb1158d",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "cf850ffebd80052b28fe894d390137d6686d627c740c4f9e9d0c11de4092f888",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "c30448df1cb5dbecffb65ac6d2a8c99597a3fdf3dd12cf35612158af466115d1",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "d786c3f7ebc668a183296be67092d1f0b423f575e9e9803d09d907ad0634db7c",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "41b92b54ff76a3f0954d982ad57891ca818fbf9221e6bcf51a9a6b4f706d2c61",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "64ee069b00f23d079556b3682064faf9b8456b5bba6bb7018013fd7caa68ea50",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "8e2b68dab6bb8dad657d452707da97115e1da8efa7313b52759ef33cb6c843ba",
+          "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.class": "e09b289faa16eab5b8223b4b35f2c3854a852de8d691c87932784c04864a5e17",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "352b4f466e5cff20341fd4ad700437c732827a9d2e9990d9c4856cd4c5feb90a",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "0f4f6410f396397210e31e7e4b5c420cc83edf2f1bf3cb1892d9c31a64451555",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "acc393b64c61587ecc7d47ecc0ba1941fec0c7d4171511c2661457dd3a5d4078",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "eb09ceb3ebc9e5e96569b17f36d2419bb2303f262d906eca52c569ddb15fc10d",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "410c5a1d87dd3d009ec962a008fb326d55e9f89048a8cd33d8b523d355933f74",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "610001a6d0741112260e86ef35a24af61fd9f35dae08c7ea19db0d4608b5d5f0",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "083d2a64af05f2cc34ed70b857e3362422106b4f8b2dc645dd4a22aa3ca2d34d",
+          "dev/atsukimc/shadowlink/mixin/ServerWorldMixin.class": "955ef5b3977098021baa55df4d26c765341cea6822764a701c8f2f4a5c757d50",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "8498d466d7f6499fbe833161cf57cb6532525a8664bea18cc3b73d7f0a4b94a4",
+          "dev/atsukimc/shadowlink/mixin/SlotAccessor.class": "bd548f55262cc46790d510d114ca7f8e4f9ae47dfde84e81725c45f914008a40",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "aaf4838f3872250ff72f9af02b5027643f16c559453066ea002a7eeba7a96400",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.class": "420a0974762b2bd591913f1d7c61dfa8f1134cf176a0963cc39c7b03a590279a",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkMixin.class": "87e7800109cda4db868945f3e36b8d3b65955749f3beccea89e0679e60aada46"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "2a3e27b004ed6d34b2f3b97b592e849387fb83a841ca22b4c0e22c733c31d6b7",
+          "ShadowLink-1.16.5-refmap.json": "a0d4ba770337a7d2dbf9e2a1f623774bb00265c62d42cdea9ed55c7306a2c5a3",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "78c29358149ff1d50b90d6843cdd6ddbe03e5081c321e7afb95910a945e93999",
+          "shadowlink.mixins.json": "d604cbb8318df5352d8adc28aad316dc721f63b0123800fc146764c2817ec4e5"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "2f874b53bd4b1e09b6cd45526a83166a5f3078a932bfe63e590a5c7b8dd53d6c",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "7c00a863e8fdf78d40a49c4c529534b928ef0327f94183669bcdb313b0cb754a",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "c1cfec52f96b21c471d9ffe819959afab47ea5e363a07d161ea9902b11f1add4",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "8dd5845263d7b212a7a7ed578466881aced67e08984c7a0d6ba8ea75594f222f",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "9419acf892dac5344f16f6bcd45ac352b7360025e842679212335bec9e452f2c",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "3677389838b100559c6621642f66cf0f55ab096cd7d6adc5edaadeb3468d0006",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "ddeb64b0e430ca0fafaf96c7c692e09bc713ff933098f81ea69c31a3b9ca7f98",
+        "main/java/dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.java": "6dce5a03f79a0bef5e17000180ce7ecc0252dc75b814d2492bb9f49129bdb12a",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "1c82c552e71c4df1bd94f3b72eb52d42d44b299f5fbe489d3ebffc09d3e0d13d",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "f36feea7421a82341940f2a80ffc12e9550c1646e984627424b89e5f705bfea7",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "f3cd5956cba3effcc2be7dbbe92e5943ab25a24e33f4a3552e27c12b7cce73c9",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "678fde600e167c2b79da20db8fb1384a3b0aad319b18d87ac6ddefb13622d8d6",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "c8752d36307b01380036ed5c8a6a87ca2260c9dd428d61f1b773cbb50740b74e",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "e4efbabb70ced2ca5197dda8d3236ccaf51b0b8c57261b0a5191d878101dd483",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "9cca1a1131c4e22f3364d55744fa40ae269eea56d28f7317c4ead6022570a131",
+        "main/java/dev/atsukimc/shadowlink/mixin/ServerWorldMixin.java": "5cbd561a3246635b2a5946a626c6a60f0b1bb3b53289fc844d4ad84dae59e3fd",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "23cb0c9f0b57039db3d8bd357ab998b0a3f72e5c949242698b321d81cb88d6aa",
+        "main/java/dev/atsukimc/shadowlink/mixin/SlotAccessor.java": "130d6192580824ea5436ee0a8aa58857d3a418fc2a28dbb6a4060ce551dfbdf8",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.java": "b55efb4fd234cb7d46d65a26a4d66a805c51aaa7538dd3afdf6655c3e98dd6fb",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkMixin.java": "7df3cef0ee156a700f680f5aa891635220447a0535b1106d3935dbb9b701a7c4",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "d13aa56be805b6120873f450afda6cd935f29ac788df1a88d5742088fb923375"
+      },
+      "dependencies": [
+        {
+          "module": "com.google.code.gson:gson:2.8.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:21.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.jimfs:jimfs:1.2-fabric",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j:66.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:2.1.28",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:brigadier:1.0.17",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:datafixerupper:4.0.26",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:javabridge:1.0.22",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:1.3.9",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.10",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.1.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.25.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:8.2.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:access-widener:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:fabric-loader-sat4j:2.3.5.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.9.2+mixin.0.8.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-mappings-parser:0.2.2.14",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-remapper:0.3.0.70",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:4.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:platform:3.4.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jinput:jinput:2.0.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.jutils:jutils:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged:1.16.5-net.fabricmc.yarn.1_16_5.1.16.5+build.10-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net_fabricmc_yarn_1_16_5_1_16_5_build_10_v2.net.fabricmc:fabric-loader:0.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.3.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-glfw:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-jemalloc:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-openal:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-opengl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-stb:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-tinyfd:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "oshi-project:oshi-core:1.1",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    },
+    "1.18": {
+      "jar_sha256": "cf8004db71c175cd6d71a50812b817659f3233a8711f25ce9d4fbe3edfbeaedf",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "dc11a2fe40c5534c243e1cca437b99a52a30ddc6ed9efc92d141bce8a9358022",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "b6078e5ba559863905bfdbd7bf26833186d987bf21f6e634eb97c34b7e7d6a6a",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "7312f781e74b44b91659a41bd6a54cd39e70386bc067e45934a48c9f1e877994",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "63385ce081074a889336b7b5821015802c420f6df75625df3604d8b048830aa0",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "8cbce83b1bbb4fe4d9677131a5aa2e136320633e1e8c3a40194341b6451a8653",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "76b5b586006e949240a5603adf1a393720a523531b7981924cb1ab6db4e0584f",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "931d54fe9120881dc376cd8b1630a2223d0668b18418f1b5bc02c7a66be90fcd",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "a7feaea9bd54d7872ee9315a5c0db7f39e0ecb6dd82f36efe49ac5426facd0b7",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "6faa0ba3efb31805a29bcd664ed4514087ca2fb83ffd95b2c986562716d4262a",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "eb2b005834345410cf91bae9549251e917961ac0b633279aefbd4b85c611ceba",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "bcd5f8f1dc686f0c70c821105f2cdd6da642e088225fcf4f9ff2502353e653dd",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "bd4d3be2e68613ffbd8e47eabf588a09c0295b5192c90cdc99d2ce8c0837a695",
+          "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.class": "7a98d3f954fa32dba571c5f4082f249432c3320cc41b4cf7d8f7356f6f55c92c",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "896eeb24fba12d957dae23072a8ce7bd92265bc86109c1c8695be8738c7ee2ba",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "a3727eb0f33c6f83f38c29f6169c4b6eb9d009b8f1713e91f1ee1dd662eb68f9",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "730c2b7237749f60107291d49e9b427de4276f916aebc6dba7c821667dfad0bf",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "fe84582f1653367c7cfa2eab4250555c33e4f0842569d37010ae34fc0f79f436",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "722d5971df26119b22983ddd3076951fe35cd70bdf4c3ced5b836dcbfba7fc69",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "1e5144b798cd50c5b8e50475aeae91de78ff1b684d34f1588214d9532d823020",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "c473648f7810a51d9ad6e581066419829b19f1932dba6f746c89e14433487d31",
+          "dev/atsukimc/shadowlink/mixin/ServerEntityHandlerMixin.class": "4c5d21c3312654076fad19564979999edf9170c2abfd23be6ee429f957a38105",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "f1a55e8f756becc1745247581f611ccff3a05a259be9578426421f70b4fea363",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "1f74830a751f3dda0a0777a13b7ec7ee383ddfedd6b42f932dbd2b86dec3f966",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.class": "f3faaa363a495ef795c9411bca2b53e8079d20935024a41432242bc59aa6260e",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkMixin.class": "6a87ab2199870ba599cb3792d6043f40873ba3bdf8a7abdd9a545c34a3b2b30d"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "f097b7a08b66bd0e615909d9bd0c867e46c1c9a2e33f0c294bfbebbc71b6de20",
+          "ShadowLink-1.18-refmap.json": "4f40fb8c8f1621fb1f024e8199bb7f3be3f2b6144b15cb4ce3c94eed706c8bac",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "a7ab00778f9043793f54231c7d13d267a6e6eca68295243888071e51f033dfea",
+          "shadowlink.mixins.json": "b8959727ec7d9e7a7800b1e3c24c6da08574f8480d7f3282ba471b780748ddfb"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "405d643e82ca21cc0e8805690da7cc00e6533b46ec5b71badca59bb26e678c68",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "6d55edfc330b1f4ed982e3f080fcef2773e20f8ef2021266f97582bd638ec8de",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "ee90b65d0726aa1aaaacef74acb24c7a1e4c279a55d5e3fef3af92d492fdefa3",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "f94c92088d1f455892cff707627a82eaa674482ab2abfb6eafbb0521f97924f2",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "9419acf892dac5344f16f6bcd45ac352b7360025e842679212335bec9e452f2c",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "3c66596ac39d0f670762121fcc9c9c751c955814a92d05f11074edd1b73701aa",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "ef5e1ce4a3e96317b4b85f0d16808f01916e94a76d75ad6e6d374f0b916dc293",
+        "main/java/dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.java": "6dce5a03f79a0bef5e17000180ce7ecc0252dc75b814d2492bb9f49129bdb12a",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "1c82c552e71c4df1bd94f3b72eb52d42d44b299f5fbe489d3ebffc09d3e0d13d",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "f36feea7421a82341940f2a80ffc12e9550c1646e984627424b89e5f705bfea7",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "f3cd5956cba3effcc2be7dbbe92e5943ab25a24e33f4a3552e27c12b7cce73c9",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "678fde600e167c2b79da20db8fb1384a3b0aad319b18d87ac6ddefb13622d8d6",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "c8752d36307b01380036ed5c8a6a87ca2260c9dd428d61f1b773cbb50740b74e",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "e4efbabb70ced2ca5197dda8d3236ccaf51b0b8c57261b0a5191d878101dd483",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "eb68916ec9ab2b6077a22f2a8edd736d6f171cde278a55aa927bdf430b5b648b",
+        "main/java/dev/atsukimc/shadowlink/mixin/ServerEntityHandlerMixin.java": "033246f38f85451ca3e5996a42a7cc906704cfa377e91be4f6436749e07ad04b",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "23cb0c9f0b57039db3d8bd357ab998b0a3f72e5c949242698b321d81cb88d6aa",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.java": "b55efb4fd234cb7d46d65a26a4d66a805c51aaa7538dd3afdf6655c3e98dd6fb",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkMixin.java": "d2898185afd079dab5544c7e952599ab3ddf12747cd62ef19c99899bca60c096",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "d13aa56be805b6120873f450afda6cd935f29ac788df1a88d5742088fb923375"
+      },
+      "dependencies": [
+        {
+          "module": "com.github.oshi:oshi-core:5.8.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.code.gson:gson:2.8.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:failureaccess:1.0.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:31.0.1-jre",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j:69.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:3.2.38",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:blocklist:1.0.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:brigadier:1.0.18",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:datafixerupper:4.0.26",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:javabridge:1.2.24",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:2.1.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.15",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.11.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.68.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:8.5.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:access-widener:2.1.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.11.2+mixin.0.8.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-mappings-parser:0.3.0+build.17",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-remapper:0.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna-platform:5.9.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:5.9.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged:1.18-net.fabricmc.yarn.1_18.1.18+build.1-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net_fabricmc_yarn_1_18_1_18_build_1_v2.net.fabricmc:fabric-loader:0.13.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.21",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.12.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.5.13",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.4.14",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.14.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.14.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-slf4j18-impl:2.14.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-glfw:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-jemalloc:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-openal:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-opengl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-stb:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-tinyfd:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.slf4j:slf4j-api:1.8.0-beta4",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    },
+    "1.18.1": {
+      "jar_sha256": "17fa13ff03acdb8d2f9265cedfc74e9f98b1a4458a874248cb515f85a890faae",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "dc11a2fe40c5534c243e1cca437b99a52a30ddc6ed9efc92d141bce8a9358022",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "b6078e5ba559863905bfdbd7bf26833186d987bf21f6e634eb97c34b7e7d6a6a",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "7312f781e74b44b91659a41bd6a54cd39e70386bc067e45934a48c9f1e877994",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "63385ce081074a889336b7b5821015802c420f6df75625df3604d8b048830aa0",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "8cbce83b1bbb4fe4d9677131a5aa2e136320633e1e8c3a40194341b6451a8653",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "76b5b586006e949240a5603adf1a393720a523531b7981924cb1ab6db4e0584f",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "931d54fe9120881dc376cd8b1630a2223d0668b18418f1b5bc02c7a66be90fcd",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "a7feaea9bd54d7872ee9315a5c0db7f39e0ecb6dd82f36efe49ac5426facd0b7",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "6faa0ba3efb31805a29bcd664ed4514087ca2fb83ffd95b2c986562716d4262a",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "eb2b005834345410cf91bae9549251e917961ac0b633279aefbd4b85c611ceba",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "bcd5f8f1dc686f0c70c821105f2cdd6da642e088225fcf4f9ff2502353e653dd",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "bd4d3be2e68613ffbd8e47eabf588a09c0295b5192c90cdc99d2ce8c0837a695",
+          "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.class": "7a98d3f954fa32dba571c5f4082f249432c3320cc41b4cf7d8f7356f6f55c92c",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "896eeb24fba12d957dae23072a8ce7bd92265bc86109c1c8695be8738c7ee2ba",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "a3727eb0f33c6f83f38c29f6169c4b6eb9d009b8f1713e91f1ee1dd662eb68f9",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "730c2b7237749f60107291d49e9b427de4276f916aebc6dba7c821667dfad0bf",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "fe84582f1653367c7cfa2eab4250555c33e4f0842569d37010ae34fc0f79f436",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "722d5971df26119b22983ddd3076951fe35cd70bdf4c3ced5b836dcbfba7fc69",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "1e5144b798cd50c5b8e50475aeae91de78ff1b684d34f1588214d9532d823020",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "c473648f7810a51d9ad6e581066419829b19f1932dba6f746c89e14433487d31",
+          "dev/atsukimc/shadowlink/mixin/ServerEntityHandlerMixin.class": "4c5d21c3312654076fad19564979999edf9170c2abfd23be6ee429f957a38105",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "f1a55e8f756becc1745247581f611ccff3a05a259be9578426421f70b4fea363",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "1f74830a751f3dda0a0777a13b7ec7ee383ddfedd6b42f932dbd2b86dec3f966",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.class": "f3faaa363a495ef795c9411bca2b53e8079d20935024a41432242bc59aa6260e",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkMixin.class": "6a87ab2199870ba599cb3792d6043f40873ba3bdf8a7abdd9a545c34a3b2b30d"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "3bb27ed8015560e617532b3ec7416e5f9d9891e5bef5acd02c43fdb313325e5a",
+          "ShadowLink-1.18.1-refmap.json": "4f40fb8c8f1621fb1f024e8199bb7f3be3f2b6144b15cb4ce3c94eed706c8bac",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "66e30c3e23a5ef08b2855a8877d3a9ae0b015feb920b66e8b9e46b288c337b04",
+          "shadowlink.mixins.json": "9ba159ee504f57904b15856acbf7849f461b2dcd99eae5d41f05c01f1752a746"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "405d643e82ca21cc0e8805690da7cc00e6533b46ec5b71badca59bb26e678c68",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "6d55edfc330b1f4ed982e3f080fcef2773e20f8ef2021266f97582bd638ec8de",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "ee90b65d0726aa1aaaacef74acb24c7a1e4c279a55d5e3fef3af92d492fdefa3",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "f94c92088d1f455892cff707627a82eaa674482ab2abfb6eafbb0521f97924f2",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "9419acf892dac5344f16f6bcd45ac352b7360025e842679212335bec9e452f2c",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "3c66596ac39d0f670762121fcc9c9c751c955814a92d05f11074edd1b73701aa",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "ef5e1ce4a3e96317b4b85f0d16808f01916e94a76d75ad6e6d374f0b916dc293",
+        "main/java/dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.java": "6dce5a03f79a0bef5e17000180ce7ecc0252dc75b814d2492bb9f49129bdb12a",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "1c82c552e71c4df1bd94f3b72eb52d42d44b299f5fbe489d3ebffc09d3e0d13d",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "f36feea7421a82341940f2a80ffc12e9550c1646e984627424b89e5f705bfea7",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "f3cd5956cba3effcc2be7dbbe92e5943ab25a24e33f4a3552e27c12b7cce73c9",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "678fde600e167c2b79da20db8fb1384a3b0aad319b18d87ac6ddefb13622d8d6",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "c8752d36307b01380036ed5c8a6a87ca2260c9dd428d61f1b773cbb50740b74e",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "e4efbabb70ced2ca5197dda8d3236ccaf51b0b8c57261b0a5191d878101dd483",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "eb68916ec9ab2b6077a22f2a8edd736d6f171cde278a55aa927bdf430b5b648b",
+        "main/java/dev/atsukimc/shadowlink/mixin/ServerEntityHandlerMixin.java": "033246f38f85451ca3e5996a42a7cc906704cfa377e91be4f6436749e07ad04b",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "23cb0c9f0b57039db3d8bd357ab998b0a3f72e5c949242698b321d81cb88d6aa",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.java": "b55efb4fd234cb7d46d65a26a4d66a805c51aaa7538dd3afdf6655c3e98dd6fb",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkMixin.java": "d2898185afd079dab5544c7e952599ab3ddf12747cd62ef19c99899bca60c096",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "d13aa56be805b6120873f450afda6cd935f29ac788df1a88d5742088fb923375"
+      },
+      "dependencies": [
+        {
+          "module": "com.github.oshi:oshi-core:5.8.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.code.gson:gson:2.8.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:failureaccess:1.0.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:31.0.1-jre",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j:69.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:3.2.38",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:blocklist:1.0.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:brigadier:1.0.18",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:datafixerupper:4.0.26",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:javabridge:1.2.24",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:2.1.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.11.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.15",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.11.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.68.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:8.5.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:access-widener:2.1.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.11.2+mixin.0.8.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-mappings-parser:0.3.0+build.17",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-remapper:0.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna-platform:5.9.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:5.9.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged:1.18.1-net.fabricmc.yarn.1_18_1.1.18.1+build.22-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net_fabricmc_yarn_1_18_1_1_18_1_build_22_v2.net.fabricmc:fabric-loader:0.13.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.21",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.12.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.5.13",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.4.14",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.14.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.14.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-slf4j18-impl:2.14.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-glfw:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-jemalloc:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-openal:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-opengl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-stb:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-tinyfd:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.slf4j:slf4j-api:1.8.0-beta4",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    },
+    "1.18.2": {
+      "jar_sha256": "42a2c486081e8d6ec970c1bd4d16d12d3824c094db4e8736e74a30f8377a378b",
+      "jar": {
+        "classes": {
+          "dev/atsukimc/shadowlink/ShadowLink.class": "dc11a2fe40c5534c243e1cca437b99a52a30ddc6ed9efc92d141bce8a9358022",
+          "dev/atsukimc/shadowlink/core/CursorView.class": "b6078e5ba559863905bfdbd7bf26833186d987bf21f6e634eb97c34b7e7d6a6a",
+          "dev/atsukimc/shadowlink/core/Endpoint.class": "7312f781e74b44b91659a41bd6a54cd39e70386bc067e45934a48c9f1e877994",
+          "dev/atsukimc/shadowlink/core/HolderKey$Kind.class": "63385ce081074a889336b7b5821015802c420f6df75625df3604d8b048830aa0",
+          "dev/atsukimc/shadowlink/core/HolderKey.class": "8cbce83b1bbb4fe4d9677131a5aa2e136320633e1e8c3a40194341b6451a8653",
+          "dev/atsukimc/shadowlink/core/InventoryAccess.class": "76b5b586006e949240a5603adf1a393720a523531b7981924cb1ab6db4e0584f",
+          "dev/atsukimc/shadowlink/core/ShadowGroup$Link.class": "931d54fe9120881dc376cd8b1630a2223d0668b18418f1b5bc02c7a66be90fcd",
+          "dev/atsukimc/shadowlink/core/ShadowGroup.class": "a7feaea9bd54d7872ee9315a5c0db7f39e0ecb6dd82f36efe49ac5426facd0b7",
+          "dev/atsukimc/shadowlink/core/ShadowManager$1.class": "6faa0ba3efb31805a29bcd664ed4514087ca2fb83ffd95b2c986562716d4262a",
+          "dev/atsukimc/shadowlink/core/ShadowManager$ChunkRef.class": "eb2b005834345410cf91bae9549251e917961ac0b633279aefbd4b85c611ceba",
+          "dev/atsukimc/shadowlink/core/ShadowManager.class": "bcd5f8f1dc686f0c70c821105f2cdd6da642e088225fcf4f9ff2502353e653dd",
+          "dev/atsukimc/shadowlink/core/ShadowState.class": "bd4d3be2e68613ffbd8e47eabf588a09c0295b5192c90cdc99d2ce8c0837a695",
+          "dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.class": "7a98d3f954fa32dba571c5f4082f249432c3320cc41b4cf7d8f7356f6f55c92c",
+          "dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.class": "896eeb24fba12d957dae23072a8ce7bd92265bc86109c1c8695be8738c7ee2ba",
+          "dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.class": "a3727eb0f33c6f83f38c29f6169c4b6eb9d009b8f1713e91f1ee1dd662eb68f9",
+          "dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.class": "730c2b7237749f60107291d49e9b427de4276f916aebc6dba7c821667dfad0bf",
+          "dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.class": "fe84582f1653367c7cfa2eab4250555c33e4f0842569d37010ae34fc0f79f436",
+          "dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.class": "722d5971df26119b22983ddd3076951fe35cd70bdf4c3ced5b836dcbfba7fc69",
+          "dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.class": "1e5144b798cd50c5b8e50475aeae91de78ff1b684d34f1588214d9532d823020",
+          "dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.class": "c473648f7810a51d9ad6e581066419829b19f1932dba6f746c89e14433487d31",
+          "dev/atsukimc/shadowlink/mixin/ServerEntityHandlerMixin.class": "4c5d21c3312654076fad19564979999edf9170c2abfd23be6ee429f957a38105",
+          "dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.class": "f1a55e8f756becc1745247581f611ccff3a05a259be9578426421f70b4fea363",
+          "dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.class": "1f74830a751f3dda0a0777a13b7ec7ee383ddfedd6b42f932dbd2b86dec3f966",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.class": "f3faaa363a495ef795c9411bca2b53e8079d20935024a41432242bc59aa6260e",
+          "dev/atsukimc/shadowlink/mixin/WorldChunkMixin.class": "6a87ab2199870ba599cb3792d6043f40873ba3bdf8a7abdd9a545c34a3b2b30d"
+        },
+        "resources": {
+          "LICENSE": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+          "META-INF/MANIFEST.MF": "9b98604eca1e1cb0e338266d31b75961be5bc1bf8a63f17ccd4c113b2e910947",
+          "ShadowLink-1.18.2-refmap.json": "4f40fb8c8f1621fb1f024e8199bb7f3be3f2b6144b15cb4ce3c94eed706c8bac",
+          "assets/shadowlink/icon.png": "94614359c9b174091ae9ca2ebfe568c6c61dc3882f50b3134d46a4199d11d7f6",
+          "fabric.mod.json": "2271d36ce4d3015fee5067bc39528439890fec7acc1cae75559ee0da72567f48",
+          "shadowlink.mixins.json": "a003e9118fd0afbdb952b226989f56da249dde6534a9c3204395c4c2b1c8c242"
+        }
+      },
+      "source_tokens": {
+        "main/java/dev/atsukimc/shadowlink/ShadowLink.java": "41ff3285d0b9f4f480c23a423ce66daebec837635609ba2efd0f1b561b185b36",
+        "main/java/dev/atsukimc/shadowlink/core/CursorView.java": "405d643e82ca21cc0e8805690da7cc00e6533b46ec5b71badca59bb26e678c68",
+        "main/java/dev/atsukimc/shadowlink/core/Endpoint.java": "6d55edfc330b1f4ed982e3f080fcef2773e20f8ef2021266f97582bd638ec8de",
+        "main/java/dev/atsukimc/shadowlink/core/HolderKey.java": "ee90b65d0726aa1aaaacef74acb24c7a1e4c279a55d5e3fef3af92d492fdefa3",
+        "main/java/dev/atsukimc/shadowlink/core/InventoryAccess.java": "f94c92088d1f455892cff707627a82eaa674482ab2abfb6eafbb0521f97924f2",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowGroup.java": "9419acf892dac5344f16f6bcd45ac352b7360025e842679212335bec9e452f2c",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowManager.java": "d5796ba895bfedbc6618ad2ebcb49f9eed7ff420aa52e0ac1daac51164eb54cf",
+        "main/java/dev/atsukimc/shadowlink/core/ShadowState.java": "ef5e1ce4a3e96317b4b85f0d16808f01916e94a76d75ad6e6d374f0b916dc293",
+        "main/java/dev/atsukimc/shadowlink/mixin/AbstractFurnaceBlockEntityAccessor.java": "6dce5a03f79a0bef5e17000180ce7ecc0252dc75b814d2492bb9f49129bdb12a",
+        "main/java/dev/atsukimc/shadowlink/mixin/DoubleInventoryAccessor.java": "1c82c552e71c4df1bd94f3b72eb52d42d44b299f5fbe489d3ebffc09d3e0d13d",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseBaseEntityAccessor.java": "f36feea7421a82341940f2a80ffc12e9550c1646e984627424b89e5f705bfea7",
+        "main/java/dev/atsukimc/shadowlink/mixin/HorseScreenHandlerAccessor.java": "f3cd5956cba3effcc2be7dbbe92e5943ab25a24e33f4a3552e27c12b7cce73c9",
+        "main/java/dev/atsukimc/shadowlink/mixin/LootableContainerBlockEntityInvoker.java": "678fde600e167c2b79da20db8fb1384a3b0aad319b18d87ac6ddefb13622d8d6",
+        "main/java/dev/atsukimc/shadowlink/mixin/MinecraftServerMixin.java": "c8752d36307b01380036ed5c8a6a87ca2260c9dd428d61f1b773cbb50740b74e",
+        "main/java/dev/atsukimc/shadowlink/mixin/PlayerManagerMixin.java": "e4efbabb70ced2ca5197dda8d3236ccaf51b0b8c57261b0a5191d878101dd483",
+        "main/java/dev/atsukimc/shadowlink/mixin/ScreenHandlerMixin.java": "eb68916ec9ab2b6077a22f2a8edd736d6f171cde278a55aa927bdf430b5b648b",
+        "main/java/dev/atsukimc/shadowlink/mixin/ServerEntityHandlerMixin.java": "033246f38f85451ca3e5996a42a7cc906704cfa377e91be4f6436749e07ad04b",
+        "main/java/dev/atsukimc/shadowlink/mixin/SimpleInventoryAccessor.java": "23cb0c9f0b57039db3d8bd357ab998b0a3f72e5c949242698b321d81cb88d6aa",
+        "main/java/dev/atsukimc/shadowlink/mixin/StorageMinecartEntityAccessor.java": "f0c3042b6ca98a41fbd63783b255077c3285801c3b9ac392d3236e921f85de60",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkAccessor.java": "b55efb4fd234cb7d46d65a26a4d66a805c51aaa7538dd3afdf6655c3e98dd6fb",
+        "main/java/dev/atsukimc/shadowlink/mixin/WorldChunkMixin.java": "d2898185afd079dab5544c7e952599ab3ddf12747cd62ef19c99899bca60c096",
+        "test/java/dev/atsukimc/shadowlink/core/ShadowRegression.java": "d13aa56be805b6120873f450afda6cd935f29ac788df1a88d5742088fb923375"
+      },
+      "dependencies": [
+        {
+          "module": "com.github.oshi:oshi-core:5.8.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.code.gson:gson:2.8.9",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:failureaccess:1.0.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.google.guava:guava:31.0.1-jre",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.ibm.icu:icu4j:70.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:authlib:3.3.39",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:blocklist:1.0.10",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:brigadier:1.0.18",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:datafixerupper:4.1.27",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:javabridge:1.2.24",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:logging:1.0.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:patchy:2.2.10",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "com.mojang:text2speech:1.12.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-codec:commons-codec:1.15",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-io:commons-io:2.11.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "commons-logging:commons-logging:1.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "io.netty:netty-all:4.1.68.Final",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "it.unimi.dsi:fastutil:8.5.6",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:access-widener:2.1.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:dev-launch-injector:0.2.1+build.8",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:sponge-mixin:0.11.2+mixin.0.8.5",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-mappings-parser:0.3.0+build.17",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.fabricmc:tiny-remapper:0.8.1",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna-platform:5.10.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.java.dev.jna:jna:5.10.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecraft:minecraft-merged:1.18.2-net.fabricmc.yarn.1_18_2.1.18.2+build.4-v2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.minecrell:terminalconsoleappender:1.3.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net.sf.jopt-simple:jopt-simple:5.0.4",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "net_fabricmc_yarn_1_18_2_1_18_2_build_4_v2.net.fabricmc:fabric-loader:0.13.3",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-compress:1.21",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.commons:commons-lang3:3.12.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpclient:4.5.13",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.httpcomponents:httpcore:4.4.14",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-api:2.17.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-core:2.17.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.apache.logging.log4j:log4j-slf4j18-impl:2.17.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-reader:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.jline:jline-terminal:3.20.0",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-glfw:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-jemalloc:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-openal:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-opengl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-stb:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl-tinyfd:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.lwjgl:lwjgl:3.3.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-analysis:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-commons:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-tree:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm-util:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.ow2.asm:asm:9.2",
+          "classifier": "",
+          "extension": "jar"
+        },
+        {
+          "module": "org.slf4j:slf4j-api:1.8.0-beta4",
+          "classifier": "",
+          "extension": "jar"
+        }
+      ]
+    }
+  }
+}

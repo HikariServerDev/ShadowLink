@@ -1,0 +1,21 @@
+{
+  "AbstractFurnaceBlockEntityAccessor": ">=1.16",
+  "ChunkAccessor": "<1.16",
+  "ChunkMixin": "<1.16",
+  "DoubleInventoryAccessor": "true",
+  "FurnaceBlockEntityAccessor": "<1.16",
+  "HorseBaseEntityAccessor": "true",
+  "HorseScreenHandlerAccessor": "true",
+  "LootableContainerBlockEntityInvoker": "true",
+  "MinecraftServerMixin": "true",
+  "PlayerManagerMixin": "true",
+  "ScreenHandlerMixin": "true",
+  "ServerEntityHandlerMixin": ">=1.18",
+  "ServerWorldMixin": ">=1.16 && <1.18",
+  "SimpleInventoryAccessor": "true",
+  "SlotAccessor": "<1.18",
+  "StorageMinecartEntityAccessor": "true",
+  "WorldChunkAccessor": ">=1.16",
+  "WorldChunkMixin": ">=1.16",
+  "WorldMixin": "<1.16"
+}

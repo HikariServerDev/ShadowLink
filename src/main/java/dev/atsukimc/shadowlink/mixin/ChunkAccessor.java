@@ -1,0 +1,13 @@
+//? if <1.16 {
+/*package dev.atsukimc.shadowlink.mixin;
+
+import net.minecraft.world.chunk.Chunk;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Accessor;
+
+@Mixin(Chunk.class)
+public interface ChunkAccessor {
+    @Accessor("loaded")
+    boolean shadowlink$isLoaded();
+}
+*///?}
