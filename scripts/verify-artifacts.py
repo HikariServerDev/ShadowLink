@@ -13,6 +13,8 @@ import tempfile
 import zipfile
 import zlib
 
+from project_model import matching_mixins, target_properties
+
 
 class VerificationError(Exception):
     pass
@@ -23,22 +25,12 @@ def require(condition, message):
         raise VerificationError(message)
 
 
-def properties(path):
-    return dict(line.strip().split("=", 1) for line in path.read_text().splitlines()
-                if "=" in line and not line.lstrip().startswith("#"))
-
-
 def supported_projects(root):
     versions = (root / "supported-versions.txt").read_text().splitlines()
     require(versions and len(versions) == len(set(versions)), "Empty or duplicate supported versions")
     require(all(re.fullmatch(r"\d+\.\d+(?:\.\d+)?", version) for version in versions), "Invalid version list")
-    projects = {p.name for p in root.iterdir() if p.is_dir() and (p / "gradle.properties").is_file()}
-    require(projects == set(versions), "Version directories differ from supported-versions.txt")
-    result = {}
-    for version in versions:
-        values = properties(root / version / "gradle.properties")
-        require(values["minecraft_version"] == version, f"{version}: wrong Minecraft property")
-        result[version] = values
+    result = target_properties(root)
+    require(set(result) == set(versions), 'Target catalog differs from supported-versions.txt')
     require(len({values["mod_version"] for values in result.values()}) == 1, "Mod versions are inconsistent")
     readme_jars = Counter(re.findall(r"ShadowLink-[\d.]+-[\d.]+\.jar", (root / "README.md").read_text()))
     expected_jars = Counter({f"ShadowLink-{v}-{p['mod_version']}.jar": 2 for v, p in result.items()})
@@ -57,13 +49,18 @@ def verify_jar(path, root, version, values):
                         "assets/shadowlink/icon.png", f"ShadowLink-{version}-refmap.json"}
             require(required <= files, f"{path.name}: missing required entries: {sorted(required - files)}")
             require(archive.read("LICENSE") == (root / "LICENSE").read_bytes(), f"{path.name}: license mismatch")
-            source = (root / version / "src/main/resources/fabric.mod.json").read_text()
+            source = (root / "src/main/resources/fabric.mod.json").read_text()
             for key, value in {"version": values["mod_version"], **values}.items():
-                source = source.replace("${" + key + "}", value)
+                source = source.replace("${" + key + "}", str(value))
             metadata = json.loads(archive.read("fabric.mod.json"))
             require(metadata == json.loads(source), f"{path.name}: wrong mod metadata")
             require(metadata["license"] == "LGPL-3.0-only", f"{path.name}: missing license metadata")
             config = json.loads(archive.read("shadowlink.mixins.json"))
+            template = (root / 'src/main/resources/shadowlink.mixins.json').read_text()
+            expected_config = json.loads(template.replace('${java_version}', str(values['java_version']))
+                                         .replace('${mixin_classes}', json.dumps(matching_mixins(root, version))))
+            expected_config['refmap'] = f'ShadowLink-{version}-refmap.json'
+            require(config == expected_config, f'{path.name}: wrong mixin selection/configuration')
             require(config["required"] is True and config["injectors"]["defaultRequire"] >= 1,
                     f"{path.name}: mixin failure was made optional")
             require(config["refmap"] == f"ShadowLink-{version}-refmap.json", f"{path.name}: wrong refmap")
@@ -76,19 +73,19 @@ def verify_jar(path, root, version, values):
             require(refmap["data"].get("named:intermediary") == mappings,
                     f"{path.name}: refmap namespace mappings differ")
             expected_major = int(metadata["depends"]["java"][2:]) + 44
+            expected_classes = set(json.loads((root / 'docs/migration/baseline.json').read_text())['targets'][version]['jar']['classes'])
+            require({name for name in files if name.endswith('.class')} == expected_classes,
+                    f'{path.name}: wrong production class set')
             for name in files - required:
                 require(name.endswith(".class"), f"{path.name}: unexpected resource {name}")
                 # Nested classes must belong to a production source, not src/test or test-support.
                 outer = name[:-6].split("$", 1)[0] + ".java"
-                require((root / version / "src/main/java" / outer).is_file(),
+                require((root / "src/main/java" / outer).is_file(),
                         f"{path.name}: non-production class {name}")
                 data = archive.read(name)
                 require(data[:4] == b"\xca\xfe\xba\xbe", f"{path.name}: invalid class {name}")
                 require(struct.unpack(">H", data[6:8])[0] == expected_major,
                         f"{path.name}: wrong Java target for {name}")
-            for source in (root / version / "src/main/java").rglob("*.java"):
-                name = source.relative_to(root / version / "src/main/java").with_suffix(".class").as_posix()
-                require(name in files, f"{path.name}: missing production class {name}")
     except (zipfile.BadZipFile, zlib.error, EOFError, KeyError, ValueError, struct.error) as error:
         raise VerificationError(f"{path.name}: invalid JAR: {error}") from error
     return {"minecraft": version, "mod_version": values["mod_version"], "file": path.name,
@@ -183,12 +180,16 @@ def negative_checks(directory, root, projects):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--directory", type=Path, default=Path("build"))
+    parser.add_argument("--directory", type=Path, default=Path("build/distributions"))
     parser.add_argument("--write-manifest", action="store_true")
     parser.add_argument("--self-test", action="store_true")
+    parser.add_argument('--version', help='Validate one CI target instead of the complete distribution')
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
     projects = supported_projects(root)
+    if args.version:
+        require(args.version in projects, f'Unsupported Minecraft target: {args.version}')
+        projects = {args.version: projects[args.version]}
     manifest, checksums = verify_collection(args.directory, root, projects, not args.write_manifest)
     if args.write_manifest:
         (args.directory / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")

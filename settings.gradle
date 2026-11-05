@@ -1,0 +1,29 @@
+pluginManagement {
+    repositories {
+        maven { url = 'https://maven.fabricmc.net/' }
+        maven { url = 'https://maven.legacyfabric.net/' }
+        maven { url = 'https://maven.kikugie.dev/releases' }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins { id 'dev.kikugie.stonecutter' version '0.7.10' }
+
+def supported = file('supported-versions.txt').readLines().findAll { !it.isBlank() }
+def selected = providers.gradleProperty('targetMinecraft').orNull
+if (selected != null && !supported.contains(selected)) {
+    throw new GradleException("Unsupported Minecraft target: ${selected}")
+}
+// Keep the source/IDE baseline registered even in a single-target CI build.
+def targets = selected == null ? supported : [selected, '1.18.2'].unique()
+stonecutter {
+    kotlinController = false
+    centralScript = 'build.gradle'
+    create(rootProject) {
+        versions(targets as String[])
+        vcsVersion = '1.18.2'
+    }
+}
+
+rootProject.name = 'ShadowLink'

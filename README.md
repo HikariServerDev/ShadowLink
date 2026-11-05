@@ -18,18 +18,20 @@ ShadowLink never creates Item Shadowing itself. It only protects what already ex
 
 | Minecraft | JAR | Fabric Loader | Java |
 | --- | --- | --- | --- |
-| 1.18.2 | `ShadowLink-1.18.2-1.0.4.jar` | 0.13.3 or newer | 17 or newer |
-| 1.18.1 | `ShadowLink-1.18.1-1.0.4.jar` | 0.13.3 or newer | 17 or newer |
-| 1.18 | `ShadowLink-1.18-1.0.4.jar` | 0.13.3 or newer | 17 or newer |
-| 1.16.5 | `ShadowLink-1.16.5-1.0.4.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16.4 | `ShadowLink-1.16.4-1.0.4.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16.3 | `ShadowLink-1.16.3-1.0.4.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16.2 | `ShadowLink-1.16.2-1.0.4.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16.1 | `ShadowLink-1.16.1-1.0.4.jar` | 0.11.3 or newer | 8 or newer |
-| 1.16 | `ShadowLink-1.16-1.0.4.jar` | 0.11.3 or newer | 8 or newer |
-| 1.12.2 | `ShadowLink-1.12.2-1.0.4.jar` | 0.15.11 or newer, with [Legacy Fabric](https://legacyfabric.net/) | 8 or newer |
+| 1.18.2 | `ShadowLink-1.18.2-1.0.5.jar` | 0.13.3 or newer | 17 or newer |
+| 1.18.1 | `ShadowLink-1.18.1-1.0.5.jar` | 0.13.3 or newer | 17 or newer |
+| 1.18 | `ShadowLink-1.18-1.0.5.jar` | 0.13.3 or newer | 17 or newer |
+| 1.16.5 | `ShadowLink-1.16.5-1.0.5.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16.4 | `ShadowLink-1.16.4-1.0.5.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16.3 | `ShadowLink-1.16.3-1.0.5.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16.2 | `ShadowLink-1.16.2-1.0.5.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16.1 | `ShadowLink-1.16.1-1.0.5.jar` | 0.11.3 or newer | 8 or newer |
+| 1.16 | `ShadowLink-1.16-1.0.5.jar` | 0.11.3 or newer | 8 or newer |
+| 1.12.2 | `ShadowLink-1.12.2-1.0.5.jar` | 0.15.11 or newer, with [Legacy Fabric](https://legacyfabric.net/) | 8 or newer |
 
 ### Installation
+
+Download the `shadowlink-distribution` artifact from a successful [Build and verify run](https://github.com/HikariServerDev/ShadowLink/actions/workflows/ci.yml), then choose the JAR for your Minecraft version. GitHub may require you to sign in to download artifacts. JARs are no longer stored in the current source tree; no Release is published automatically.
 
 - **Dedicated server:** put the JAR in the server's `mods` folder. Players do **not** need to install anything, and they can join with a vanilla client.
 - **Singleplayer:** put the same JAR in your client's `mods` folder.
@@ -56,6 +58,8 @@ There is nothing to set up: no commands, no config files, no messages. Just inst
 - Mods that replace an inventory while its owner remains loaded may break its links. ShadowLink leaves such replacements untouched.
 - If the server crashes suddenly, the last moments may not be saved.
 
+For local builds and development, see [Development and verification](docs/DEVELOPMENT.md).
+
 ---
 
 ## 日本語
@@ -72,18 +76,20 @@ ShadowLink自身がItem Shadowingを作ることはありません。すでに�
 
 | Minecraft | JAR | Fabric Loader | Java |
 | --- | --- | --- | --- |
-| 1.18.2 | `ShadowLink-1.18.2-1.0.4.jar` | 0.13.3以上 | 17以上 |
-| 1.18.1 | `ShadowLink-1.18.1-1.0.4.jar` | 0.13.3以上 | 17以上 |
-| 1.18 | `ShadowLink-1.18-1.0.4.jar` | 0.13.3以上 | 17以上 |
-| 1.16.5 | `ShadowLink-1.16.5-1.0.4.jar` | 0.11.3以上 | 8以上 |
-| 1.16.4 | `ShadowLink-1.16.4-1.0.4.jar` | 0.11.3以上 | 8以上 |
-| 1.16.3 | `ShadowLink-1.16.3-1.0.4.jar` | 0.11.3以上 | 8以上 |
-| 1.16.2 | `ShadowLink-1.16.2-1.0.4.jar` | 0.11.3以上 | 8以上 |
-| 1.16.1 | `ShadowLink-1.16.1-1.0.4.jar` | 0.11.3以上 | 8以上 |
-| 1.16 | `ShadowLink-1.16-1.0.4.jar` | 0.11.3以上 | 8以上 |
-| 1.12.2 | `ShadowLink-1.12.2-1.0.4.jar` | 0.15.11以上＋[Legacy Fabric](https://legacyfabric.net/) | 8以上 |
+| 1.18.2 | `ShadowLink-1.18.2-1.0.5.jar` | 0.13.3以上 | 17以上 |
+| 1.18.1 | `ShadowLink-1.18.1-1.0.5.jar` | 0.13.3以上 | 17以上 |
+| 1.18 | `ShadowLink-1.18-1.0.5.jar` | 0.13.3以上 | 17以上 |
+| 1.16.5 | `ShadowLink-1.16.5-1.0.5.jar` | 0.11.3以上 | 8以上 |
+| 1.16.4 | `ShadowLink-1.16.4-1.0.5.jar` | 0.11.3以上 | 8以上 |
+| 1.16.3 | `ShadowLink-1.16.3-1.0.5.jar` | 0.11.3以上 | 8以上 |
+| 1.16.2 | `ShadowLink-1.16.2-1.0.5.jar` | 0.11.3以上 | 8以上 |
+| 1.16.1 | `ShadowLink-1.16.1-1.0.5.jar` | 0.11.3以上 | 8以上 |
+| 1.16 | `ShadowLink-1.16-1.0.5.jar` | 0.11.3以上 | 8以上 |
+| 1.12.2 | `ShadowLink-1.12.2-1.0.5.jar` | 0.15.11以上＋[Legacy Fabric](https://legacyfabric.net/) | 8以上 |
 
 ### 導入方法
+
+[Build and verifyの成功した実行](https://github.com/HikariServerDev/ShadowLink/actions/workflows/ci.yml)から `shadowlink-distribution` の成果物をダウンロードし、使用するMinecraftのバージョンに合うJARを選んでください。成果物のダウンロードにはGitHubへのログインが必要な場合があります。現在のソースツリーにはJARを保存せず、Releaseの自動公開も行いません。
 
 - **専用サーバー:** JARをサーバーの `mods` フォルダに入れてください。プレイヤー側は何も入れる必要がなく、Vanillaのクライアントで参加できます。
 - **シングルプレイ:** 同じJARをクライアントの `mods` フォルダに入れてください。
@@ -109,3 +115,5 @@ Fabric APIは**不要**です。Carpetも必須ではありませんが、Carpet
 - 額縁、アーマースタンド、Mobの装備、ドロップしたアイテムは対象外です。
 - 読み込み済みのインベントリを別のModが置き換えると、リンクが解除される場合があります。ShadowLinkはその置き換え内容には触れません。
 - サーバーが突然クラッシュした場合、直前の状態が保存されていないことがあります。
+
+ローカルでのビルドや開発については、[開発と検証](docs/DEVELOPMENT.md)を参照してください。

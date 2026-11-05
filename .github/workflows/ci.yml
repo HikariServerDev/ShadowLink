@@ -1,0 +1,84 @@
+name: Build and verify
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: shadowlink-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  targets:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Verify shared structure and target catalog
+        run: python3 scripts/check-structure.py
+      - id: matrix
+        name: Read supported targets
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          print('matrix=' + json.dumps({'minecraft': Path('supported-versions.txt').read_text().splitlines()}))
+          PY
+
+  build:
+    needs: targets
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix: ${{ fromJSON(needs.targets.outputs.matrix) }}
+    env:
+      MINECRAFT_VERSION: ${{ matrix.minecraft }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@77dd5b2ce225ea11469928ac317850245a74ae78 # v6.2.0
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Build and run the same version checks as the local build
+        run: ./gradlew -PtargetMinecraft="$MINECRAFT_VERSION" ":$MINECRAFT_VERSION:buildAndCollect" --no-daemon --max-workers=2 --console=plain
+      - name: Verify this target and reject invalid artifacts
+        run: python3 scripts/verify-artifacts.py --directory "build/collected/$MINECRAFT_VERSION" --version "$MINECRAFT_VERSION" --write-manifest --self-test
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: shadowlink-target-${{ matrix.minecraft }}
+          path: build/collected/${{ matrix.minecraft }}/*
+          if-no-files-found: error
+          retention-days: 30
+
+  distribution:
+    needs: build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: shadowlink-target-*
+          path: build/downloaded
+      - name: Verify and collect the complete ten-target distribution
+        run: python3 scripts/collect-artifacts.py --input build/downloaded --output build/distributions
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: shadowlink-distribution
+          path: build/distributions/*
+          if-no-files-found: error
+          retention-days: 30

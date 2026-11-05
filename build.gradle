@@ -1,0 +1,61 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+plugins {
+    id 'fabric-loom' version '1.7.4'
+    id 'legacy-looming' version '1.7.7' apply false
+}
+
+ext.minecraft_version = stonecutter.current.version
+ext.target = new JsonSlurper().parse(rootProject.file('gradle/targets.json'))[minecraft_version]
+if (target.legacy) { apply plugin: 'legacy-looming' }
+ext.loader_version = target.loader_version
+
+version = property('mod_version')
+group = property('maven_group')
+base { archivesName = "${property('archives_base_name')}-${minecraft_version}" }
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+    if (target.legacy) { maven { url = 'https://maven.legacyfabric.net/' } }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    if (target.legacy) { mappings(legacy.yarn(minecraft_version, target.yarn_build)) }
+    else { mappings "net.fabricmc:yarn:${target.yarn_mappings}:v2" }
+    // Keep the existing minimum Loader; neither Fabric API nor Carpet is a dependency.
+    modImplementation "net.fabricmc:fabric-loader:${loader_version}"
+}
+
+apply from: rootProject.file('gradle/compat.gradle')
+
+processResources {
+    def values = [version: project.version, minecraft_version: minecraft_version,
+                  loader_version: loader_version, java_version: target.java_version,
+                  mixin_classes: JsonOutput.toJson(project.mixinClasses)]
+    inputs.properties(values)
+    filesMatching(['fabric.mod.json', 'shadowlink.mixins.json']) { expand(values) }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = target.java_version as int
+}
+
+java { withSourcesJar() }
+loom {
+    mixin { defaultRefmapName = "ShadowLink-${minecraft_version}-refmap.json" }
+    runs.configureEach { runDir = "run/${minecraft_version}" }
+}
+
+apply from: rootProject.file('gradle/verification.gradle')
+
+tasks.register('buildAndCollect', Sync) {
+    group = 'build'
+    description = 'Collect this target only after its build and all checks pass.'
+    dependsOn tasks.build
+    from tasks.remapJar.archiveFile
+    into rootProject.layout.buildDirectory.dir("collected/${minecraft_version}")
+}

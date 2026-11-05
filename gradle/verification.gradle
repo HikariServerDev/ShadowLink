@@ -1,11 +1,13 @@
+import groovy.json.JsonOutput
+
 // Keep packaging and verification identical across the independent version projects.
 tasks.withType(Jar).configureEach {
-    from("../LICENSE")
+    from(rootProject.file('LICENSE'))
     preserveFileTimestamps = false
     reproducibleFileOrder = true
 }
 
-sourceSets.test.java.srcDir("../test-support")
+sourceSets.test.java.srcDir(rootProject.file('test-support'))
 
 tasks.register("regressionTest", JavaExec) {
     dependsOn testClasses
@@ -28,6 +30,49 @@ tasks.register("verifyMixinContracts", JavaExec) {
     }
 }
 
+tasks.register('verifyMigrationEquivalence', JavaExec) {
+    dependsOn testClasses, remapJar
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.atsukimc.shadowlink.test.JarEquivalenceCheck'
+    maxHeapSize = '256m'
+    doFirst {
+        args = [rootProject.file('docs/migration/baseline.json').absolutePath,
+                project.minecraft_version, tasks.remapJar.archiveFile.get().asFile.absolutePath]
+    }
+}
+
+def modelFile = layout.buildDirectory.file('verification/model.json')
+tasks.register('writeVerificationModel') {
+    dependsOn compileJava, compileTestJava, processResources
+    inputs.files(tasks.compileJava.source, tasks.compileTestJava.source)
+    inputs.files(rootProject.file('gradle/targets.json'), rootProject.file('gradle.properties'))
+    outputs.file(modelFile)
+    doLast {
+        def root = rootProject.projectDir.toPath()
+        def relative = { File file -> root.relativize(file.toPath()).toString().replace('\\', '/') }
+        def classes = fileTree(tasks.compileJava.destinationDirectory).matching { include '**/*.class' }.files.collect {
+            tasks.compileJava.destinationDirectory.get().asFile.toPath().relativize(it.toPath()).toString().replace('\\', '/')
+        }.sort()
+        def dependencies = configurations.runtimeClasspath.resolvedConfiguration.resolvedArtifacts.collect {
+            [module: it.moduleVersion.id.toString(), classifier: it.classifier ?: '', extension: it.extension]
+        }.sort { a, b -> a.toString() <=> b.toString() }
+        def data = [minecraft: project.minecraft_version, java: project.target.java_version,
+                    source_files: [main: tasks.compileJava.source.files.collect(relative).sort(),
+                                   test: tasks.compileTestJava.source.files.collect(relative).sort()],
+                    classes: classes, dependencies: dependencies]
+        def output = modelFile.get().asFile
+        output.parentFile.mkdirs()
+        output.text = JsonOutput.prettyPrint(JsonOutput.toJson(data)) + '\n'
+    }
+}
+
+tasks.register('verifyEffectiveSources', Exec) {
+    dependsOn 'writeVerificationModel'
+    workingDir rootProject.projectDir
+    commandLine 'python3', rootProject.file('scripts/verify-sources.py').absolutePath,
+            '--version', project.minecraft_version, '--model', modelFile.get().asFile.absolutePath
+}
+
 tasks.named("check") {
-    dependsOn "regressionTest", "verifyMixinContracts"
+    dependsOn "regressionTest", "verifyMixinContracts", 'verifyMigrationEquivalence', 'verifyEffectiveSources'
 }

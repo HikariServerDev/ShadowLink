@@ -1,0 +1,72 @@
+{
+  "1.12.2": {
+    "loader_version": "0.15.11",
+    "yarn_build": "604",
+    "java_version": 8,
+    "legacy": true,
+    "nbt_names": "nbt"
+  },
+  "1.16": {
+    "loader_version": "0.11.3",
+    "yarn_mappings": "1.16+build.4",
+    "java_version": 8,
+    "legacy": false,
+    "nbt_names": "tag"
+  },
+  "1.16.1": {
+    "loader_version": "0.11.3",
+    "yarn_mappings": "1.16.1+build.21",
+    "java_version": 8,
+    "legacy": false,
+    "nbt_names": "tag"
+  },
+  "1.16.2": {
+    "loader_version": "0.11.3",
+    "yarn_mappings": "1.16.2+build.47",
+    "java_version": 8,
+    "legacy": false,
+    "nbt_names": "tag"
+  },
+  "1.16.3": {
+    "loader_version": "0.11.3",
+    "yarn_mappings": "1.16.3+build.47",
+    "java_version": 8,
+    "legacy": false,
+    "nbt_names": "tag"
+  },
+  "1.16.4": {
+    "loader_version": "0.11.3",
+    "yarn_mappings": "1.16.4+build.9",
+    "java_version": 8,
+    "legacy": false,
+    "nbt_names": "tag"
+  },
+  "1.16.5": {
+    "loader_version": "0.11.3",
+    "yarn_mappings": "1.16.5+build.10",
+    "java_version": 8,
+    "legacy": false,
+    "nbt_names": "nbt"
+  },
+  "1.18": {
+    "loader_version": "0.13.3",
+    "yarn_mappings": "1.18+build.1",
+    "java_version": 17,
+    "legacy": false,
+    "nbt_names": "nbt"
+  },
+  "1.18.1": {
+    "loader_version": "0.13.3",
+    "yarn_mappings": "1.18.1+build.22",
+    "java_version": 17,
+    "legacy": false,
+    "nbt_names": "nbt"
+  },
+  "1.18.2": {
+    "loader_version": "0.13.3",
+    "yarn_mappings": "1.18.2+build.4",
+    "java_version": 17,
+    "legacy": false,
+    "nbt_names": "nbt"
+  }
+}
