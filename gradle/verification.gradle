@@ -1,0 +1,33 @@
+// Keep packaging and verification identical across the independent version projects.
+tasks.withType(Jar).configureEach {
+    from("../LICENSE")
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+sourceSets.test.java.srcDir("../test-support")
+
+tasks.register("regressionTest", JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "dev.atsukimc.shadowlink.test.OfflineLauncher"
+    maxHeapSize = "512m"
+}
+
+tasks.register("verifyMixinContracts", JavaExec) {
+    dependsOn testClasses, remapJar
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "dev.atsukimc.shadowlink.test.MixinContractCheck"
+    maxHeapSize = "256m"
+    doFirst {
+        def gameJars = loom.intermediaryMinecraftProvider.minecraftJarPaths
+        if (gameJars.size() != 1) {
+            throw new GradleException("Expected one merged intermediary Minecraft JAR, got ${gameJars}")
+        }
+        args = [tasks.remapJar.archiveFile.get().asFile.absolutePath, gameJars[0].toString()]
+    }
+}
+
+tasks.named("check") {
+    dependsOn "regressionTest", "verifyMixinContracts"
+}

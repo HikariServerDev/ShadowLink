@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-versions=(1.12.2 1.16 1.16.1 1.16.2 1.16.3 1.16.4 1.16.5 1.18 1.18.1 1.18.2)
+mapfile -t versions < supported-versions.txt
 
 staging=$(mktemp -d "$PWD/.build-XXXXXXXX")
 trap 'rm -rf "$staging"' EXIT
@@ -15,9 +15,10 @@ for version in "${versions[@]}"; do
     test -f "$jar"
     cp "$jar" "$staging/"
 done
+python3 scripts/verify-artifacts.py --directory "$staging" --write-manifest --self-test
 # Keep the previous complete set until every build and regression check has succeeded.
 mkdir -p build
 rm -f build/ShadowLink-*.jar
-cp "$staging/"*.jar build/
+cp "$staging/"* build/
 echo
 ls -l build

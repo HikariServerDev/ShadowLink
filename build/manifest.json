@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "minecraft": "1.12.2",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.12.2-1.0.4.jar",
+      "size": 242226,
+      "sha256": "bff84ba2193280229c0d8ef9d5553729fd900543a547eae031148bd7bc6f174a",
+      "fabric_loader": ">=0.15.11",
+      "java": ">=8",
+      "mappings": "Legacy Yarn build 604"
+    },
+    {
+      "minecraft": "1.16",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.16-1.0.4.jar",
+      "size": 241681,
+      "sha256": "21350e641fb009d855a36877b4c1d4c0ab60701eede6ed4b7d0d6b4d6632e022",
+      "fabric_loader": ">=0.11.3",
+      "java": ">=8",
+      "mappings": "1.16+build.4"
+    },
+    {
+      "minecraft": "1.16.1",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.16.1-1.0.4.jar",
+      "size": 241689,
+      "sha256": "4abb4de0a4da797c6bd1597aa2f55586af247640a42e7f61caf03fd9b6851acd",
+      "fabric_loader": ">=0.11.3",
+      "java": ">=8",
+      "mappings": "1.16.1+build.21"
+    },
+    {
+      "minecraft": "1.16.2",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.16.2-1.0.4.jar",
+      "size": 241690,
+      "sha256": "096ccd97df9a29e068c67c4b1a80bb4c3c39fa188d1a0dbb55444cbede24a1a3",
+      "fabric_loader": ">=0.11.3",
+      "java": ">=8",
+      "mappings": "1.16.2+build.47"
+    },
+    {
+      "minecraft": "1.16.3",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.16.3-1.0.4.jar",
+      "size": 241689,
+      "sha256": "1d3a81aed21e25367980c7e59463a10525e06241dd10ef6f59881b5d05dc418e",
+      "fabric_loader": ">=0.11.3",
+      "java": ">=8",
+      "mappings": "1.16.3+build.47"
+    },
+    {
+      "minecraft": "1.16.4",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.16.4-1.0.4.jar",
+      "size": 241690,
+      "sha256": "e5bd158eaf9e3f36b9cf32c5283ee7b5176523878ac6a132fedb8cbf710248b4",
+      "fabric_loader": ">=0.11.3",
+      "java": ">=8",
+      "mappings": "1.16.4+build.9"
+    },
+    {
+      "minecraft": "1.16.5",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.16.5-1.0.4.jar",
+      "size": 241690,
+      "sha256": "a467f0d22149adfbb33ccbc11e78f9d1d261284ffa34c1124c28dbbb13f46084",
+      "fabric_loader": ">=0.11.3",
+      "java": ">=8",
+      "mappings": "1.16.5+build.10"
+    },
+    {
+      "minecraft": "1.18",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.18-1.0.4.jar",
+      "size": 241300,
+      "sha256": "cf8004db71c175cd6d71a50812b817659f3233a8711f25ce9d4fbe3edfbeaedf",
+      "fabric_loader": ">=0.13.3",
+      "java": ">=17",
+      "mappings": "1.18+build.1"
+    },
+    {
+      "minecraft": "1.18.1",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.18.1-1.0.4.jar",
+      "size": 241308,
+      "sha256": "17fa13ff03acdb8d2f9265cedfc74e9f98b1a4458a874248cb515f85a890faae",
+      "fabric_loader": ">=0.13.3",
+      "java": ">=17",
+      "mappings": "1.18.1+build.22"
+    },
+    {
+      "minecraft": "1.18.2",
+      "mod_version": "1.0.4",
+      "file": "ShadowLink-1.18.2-1.0.4.jar",
+      "size": 241310,
+      "sha256": "42a2c486081e8d6ec970c1bd4d16d12d3824c094db4e8736e74a30f8377a378b",
+      "fabric_loader": ">=0.13.3",
+      "java": ">=17",
+      "mappings": "1.18.2+build.4"
+    }
+  ]
+}
