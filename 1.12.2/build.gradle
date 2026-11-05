@@ -41,16 +41,4 @@ java {
     withSourcesJar()
 }
 
-sourceSets.test.java.srcDir("../test-support")
-
-// Core regressions run against this version's actual ItemStack/NBT classes, without a server.
-tasks.register("regressionTest", JavaExec) {
-    dependsOn testClasses
-    classpath = sourceSets.test.runtimeClasspath
-    mainClass = "dev.atsukimc.shadowlink.test.OfflineLauncher"
-    maxHeapSize = "512m"
-}
-
-tasks.named("check") {
-    dependsOn "regressionTest"
-}
+apply from: "../gradle/verification.gradle"

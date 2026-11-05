@@ -5,6 +5,7 @@
   "name": "ShadowLink",
   "description": "Detects vanilla Item Shadowing and restores the shared ItemStack reference after logout, chunk reload and server restart.",
   "authors": ["AtsukiMC"],
+  "license": "LGPL-3.0-only",
   "icon": "assets/shadowlink/icon.png",
   "environment": "*",
   "entrypoints": {
